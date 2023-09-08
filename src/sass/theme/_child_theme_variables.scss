@@ -1,0 +1,31 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+
+// Fonts
+$font-family: 'Poppins', sans-serif;
+$font-family2: 'Roboto Slab', serif;
+
+// Fonts Weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold:bold;
+$font-weight-heavy: 900;
+
+// Alignments
+$align-right: right; 
+$align-center: center;
+$align-left: left;
+  
+// Display
+$display-flex: flex;
+$display-block: block; 
+$display-grid: grid;
+
+// Text Transform
+$text-transform-capitalize: capitalize;
+$text-transform-uppercase: uppercase;
+$text-transform-lowercase: lowercase;
+$text-transform-lowercase: lowercase;

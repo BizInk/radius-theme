@@ -1,0 +1,27 @@
+.two-col-section {
+    .col-right {
+        .two-col-img-wrap {
+            
+        }
+    }
+}
+
+.two-col-badge {
+    background-color: $red;
+    color: $white;
+
+    h3 {
+        color: $white;
+    } 
+}
+
+.xl-font-wrap{
+    h6{
+        color:$red;
+    }
+    .xl-font {    
+        color: $primary;
+        -webkit-text-fill-color: $white;    
+        -webkit-text-stroke-color: $primary;    
+    }
+}

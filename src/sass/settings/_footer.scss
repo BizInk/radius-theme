@@ -1,0 +1,51 @@
+footer{
+	background-color:rgba($dark, 0.95);	
+	.footer-wrap{
+		.footer-content{
+			p{
+				color:$white;
+			}
+		}
+		nav li a {		
+			color:$white;
+			&:hover{
+				color:$red;			
+			}
+		}	
+		h5{
+			color:$red;
+		}			
+		.social-nav ul li a {
+			i{
+			color:$white;
+				&:hover{
+				color:$red;
+				}
+			}
+		}
+		address{
+			color:$white;
+		}		
+	}
+	.disclamer-wrap {   
+	   color:rgba($white,0.5);
+	}
+
+	.social-wrap{	
+		background-color:$dark;
+		.container{
+			border-top: 1px solid rgba($dark, 0.14);
+			ul li {	
+				a {
+					color: $primary;			
+					&:hover{
+						color: $primary;			
+					}
+				}
+			}	
+			.copyright-wrap {
+				color:rgba($white,0.5);
+			}
+		}
+	}	
+}

@@ -1,0 +1,160 @@
+.teamlist-section {
+    .team-member-wrap{
+         .team-social-wrap {                                   
+            .plus-icon, .team-social a {                
+                background:$red;
+                color:$white;                 
+                box-shadow: 5px 3px 20px rgba($dark, 0.16); 
+            }
+            .team-social {                
+                a {                                                
+                    background:$white;
+                    color:$primary;
+                    &:hover{
+                        background:$red;
+                        color:$white;
+                    }
+                }
+            }                     
+        }
+        .member-details { 
+            h4 {                
+                a{
+                    color:$primary;
+                }
+            }
+            h6{
+              color:$red;
+            }            
+        }
+        &:hover{
+            background:$primary;         
+            .member-details {
+                h4,h6 {
+                    color:$white;
+                    a{
+                        color:$white;
+                    }
+                }                
+            }       
+        } 
+    }
+}
+
+
+.member-details-section{
+    .member-img {        
+        box-shadow: 5px 5px 50px rgba($dark, 0.09);   
+        .address-wrpal {        
+            ul li{            
+                a {              
+                    color: inherit;               
+                    border-bottom: 1px solid rgba($dark, 0.08);               
+                    i {
+                        color:$red;                    
+                    }
+                    &:hover {
+                        color:$red;
+                    }
+                    
+                }
+            }       
+        }    
+    }
+    h6{
+        color:$red;
+    }
+    .social-wrap{
+        border:1px solid rgba($primary, 0.15);
+        border-left:0;
+        border-right:0;
+        ul.social-nav {        
+            li{  
+                a{  
+                    color:$primary;
+                    &:hover{
+                        color:$red; 
+                    }
+                                            
+                }
+            }
+        }  
+    }
+}
+
+.get-in-touch{    
+    &:before{
+        background-color:rgba($dark, 0.18);
+    }
+    h2 + p{
+        color:$dark
+    }
+    .location-wrap{
+        ul{
+            li {       
+                i {
+                    color:$red;
+                }
+                a {
+                    color:rgba($dark,0.8);
+                    &:hover{
+                        color:$dark;
+                    }
+                }
+                &:hover{
+                   color:$dark;
+                   i{
+                      color:$dark;
+                   }
+                }
+            }        
+        }
+    }
+    
+    .gForm{    
+        .gform_wrapper{
+            form{
+                .gform_body{
+                    .gform_fields{
+                        .gfield{             
+                            .ginput_container{
+                                input[type="text"],
+                                input[type="number"],
+                                input[type="date"],
+                                input[type="email"],
+                                input[type="tel"],
+                                textarea {           
+                                                    
+                                    &:focus{
+                                   
+                                    }
+                                }
+                                textarea{
+                                   
+                                }
+                                ::-webkit-input-placeholder {
+                                    color:$dark;
+                                }                      
+                                :-moz-placeholder {
+                                    color:$dark;
+                                }                    
+                                ::-moz-placeholder {
+                                    color:$dark;                              
+                                }                
+                                :-ms-input-placeholder {
+                                    color:$dark;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                .gform_footer{
+                    .gform_button{                   
+                                                 
+                    }
+                }
+            }            
+        }
+    }  
+}

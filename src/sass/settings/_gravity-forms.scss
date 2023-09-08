@@ -1,0 +1,105 @@
+//Gravity forms styles
+
+.gform_wrapper {
+
+	//form heading
+	.gform_heading {
+		.gform_title {
+			display: none;
+		}
+	}
+
+	form {
+
+		//form body
+		.gform_body {
+			.gform_fields {
+				.gfield {
+
+					//label for form inputs
+					.gfield_label {}
+
+					//styles for form inputs
+					.ginput_container {
+
+						input[type="text"],
+						input[type="number"],
+						input[type="date"],
+						input[type="email"],
+						input[type="tel"],
+						textarea {
+							border:1px solid #C3CAD9;							
+							background:transparent;
+
+							&:focus-visible {
+							
+							}
+						}
+						
+						::placeholder{
+							color:$light-gray;
+						}
+
+						::-webkit-input-placeholder {
+							color:$light-gray;
+						}
+
+						:-moz-placeholder {
+							/* Firefox 18- */
+							color:$light-gray;
+						}
+
+						::-moz-placeholder {
+							/* Firefox 19+ */
+							color:$light-gray;
+						}
+
+						:-ms-input-placeholder {
+							color:$light-gray;						
+						}
+
+						//styles for complex fields such as the name field
+						&.ginput_complex {
+							span {
+								label {}
+							}
+						}
+
+						.gfield_radio {}
+
+						.gfield_checkbox {}
+
+						.gfield_description {
+							
+						}
+					}
+				}
+			}
+		}
+
+		//form footer
+		.gform_footer {
+			input[type="submit"] {							
+				color:$white;	
+				background-color:$red;				
+				&:hover{
+					background-color:$primary;
+					color:$white; 
+				}								
+			}
+		}
+
+	}
+}
+
+.gform_confirmation_message {
+	color: $primary;	
+}
+
+input[type="submit"] {							
+				color:$primary;	
+				&:hover{
+					background-color:$primary;
+					color:$white;
+				}								
+			}

@@ -1,0 +1,37 @@
+.inner-banner-section {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height:666px;
+    padding:50px 0;   
+    .full-width-wysiwyg{
+        margin-bottom:0;
+        .editor-design p{
+            font-size:2.8rem;
+            line-height: 1.36;
+            @include media-breakpoint-down(lg) {                            
+                font-size: 1.6rem;
+                line-height: 1.5;
+            }
+        }
+    }
+    @include media-breakpoint-down(lg) {                            
+        min-height:350px;
+    }
+    .inner-banner-blue-shape, .inner-banner-yellow-shape {
+        position: absolute;
+        bottom:0;
+    }
+    .inner-banner-yellow-shape {
+        z-index: -1;
+    } 
+    .shape-color {
+        top:0;
+        position:absolute;
+        width:100%;
+        height:80%;
+    }
+}  
+
+ 

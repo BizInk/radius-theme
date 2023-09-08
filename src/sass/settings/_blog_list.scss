@@ -1,0 +1,61 @@
+.blog-listing-section{
+    .filter-wrap {
+        h4{
+            color:$primary;
+        } 
+        span{                     
+            background:$primary;           
+            color:$white;                       
+        }
+        ul {
+            li {               
+                &:hover {
+                    background:$primary;
+                    color:$white;
+                }
+                &.active{
+                    background:transparent; 
+                    color:$primary;       
+                }
+            }
+        }        
+        
+    }
+    
+    .blog-inner-wrap{       
+        .blog-details{
+            color:$dark;      
+            background-color:$white;  
+            a h4{
+                color:$dark;
+                &:hover{
+                    color:$primary;
+                }
+            }  
+            a.readmore{                
+                color:$primary;
+                img{
+                    filter: brightness(0) saturate(100%) invert(41%) sepia(62%) saturate(2646%) hue-rotate(157deg) brightness(96%) contrast(99%);
+                }  
+                &:hover{
+                    color:$dark;
+                }
+            }                         
+        }   
+    }
+} 
+.related-post{
+    .blog {
+        .blog-inner-wrap{                                                
+            .blog-details{
+                background-color:$white;          
+                a{
+                    &:hover{
+                        color:$dark;
+                    }
+                }                                                                                  
+            }
+        }       
+    }
+} 
+

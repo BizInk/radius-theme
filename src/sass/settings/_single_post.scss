@@ -1,0 +1,127 @@
+.single, .archive {
+	.blog-wraper{
+		.row{						
+			aside{				
+				background:$white;						
+				.social-wrap{				
+					a{
+						color:$light-gray;
+						&:hover{
+							color:$red;
+						}
+					}
+				}
+			}
+		}
+	}
+	.wrapper {		
+		.entry-title {						
+			color:$black;			
+		}				
+		.content-area a{			
+			color:$primary;
+		}		
+		.entry-meta {		
+			a {
+				color: $primary;				
+				&:hover {
+					color:$orange;
+				}
+			}
+		}									
+		button.wp-block-search__button.wp-element-button  {			
+			&:before{				
+				color:$red;				
+			}
+			&:hover{
+				&:before{				
+					color:$primary;				
+				}
+			}
+		}
+		
+		input#wp-block-search__input-1 {			
+			border: 1px solid  rgba($dark, 0.08);			
+		}	
+		.post-navigation {	
+			.nav-previous,
+			.nav-next {		
+				a {
+					background:$dark;
+					color:$white;			
+		 			&:hover{
+						background:$primary;
+						color:$white;
+						border-color:$primary;
+					}
+				}
+			}	
+		}
+
+		.tag-single {
+			a {		
+				&:hover {
+					color: $primary;
+				}
+			}
+		}	
+	}
+	.comments-area {		
+		.comment-reply-title {
+			color: $primary;
+		}
+	}
+	#right-sidebar {						
+		.widget {
+			.search-form {	
+				 .search-field {
+				 	border-color:$light-gray;
+				 }
+				 .submit{		
+					color:$white;
+				}
+			}
+			&.widget_categories{
+				ul {					
+					li {						 															
+						a {
+							color: $primary;							
+							&::before {									
+								color:$red;								
+							}
+							&:hover {
+								color: $red;
+								&::before{
+									color: $primary;								
+								}
+							}												
+						}						
+					}
+				}
+			}			
+			.wp-block-latest-posts{
+				a.wp-block-latest-posts__post-title {					
+					color:$primary;					
+					&:hover{
+						color:$red; 
+					}
+				}
+				.wp-block-latest-posts__post-author {
+					color:$light-gray;					
+				}
+			}
+		}			
+		aside#radius_categories_widget-2 {								
+			li.cat-item a {				
+				color:inherit;				
+				&:hover {
+					color:$red;
+				}				
+			}						
+		}	
+	}		
+}
+
+
+
+

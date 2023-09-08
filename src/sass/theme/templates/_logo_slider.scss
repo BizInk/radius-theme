@@ -1,0 +1,27 @@
+.logo-section {
+	margin: 80px 0;
+	@include media-breakpoint-down(lg) {
+		margin: 40px 0;
+		overflow: hidden;
+	}
+	
+	.logo-slider {	
+		padding-bottom: 40px;
+		.logo {
+			padding: 0 30px;
+			@include media-breakpoint-down(sm) {
+				padding: 0 15px;
+			}
+			img{
+				margin:0 auto;
+				height:135px;
+				object-fit: contain;
+				@include media-breakpoint-down(md) {
+					height: 80px;
+					width: 65%;
+				}
+			}
+		}
+	}	
+}
+

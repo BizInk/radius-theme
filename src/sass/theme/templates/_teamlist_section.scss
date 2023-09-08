@@ -1,0 +1,156 @@
+.teamlist-section {           
+    .row{
+        @include media-breakpoint-down(lg) {
+            margin-bottom: -30px;
+        }
+    }
+    .team-member {
+        text-decoration: none;
+        margin-bottom: 1rem;
+        text-align: center;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 3rem;
+        }
+        .team-member-wrap {
+            height: 100%;
+            overflow: hidden;
+            display: block;
+            text-decoration: none;
+            padding: 0 30px;
+            @include media-breakpoint-down(md) {
+                padding: 0;
+            }
+            .member-img {
+                width: 100%;
+                height:300px;
+                margin: 0 auto; 
+                overflow: hidden;
+                box-shadow: 0px 5px 15px #00000014;
+                border-radius: 235px;
+                position: relative;
+                height: 0;
+                width: 100%;
+                padding-top: 140%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    @include transition(all 0.3s ease-in-out);
+                    transform: scale(1.001);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            .member-details {
+                padding: 3.5rem 2rem;               
+                @include transition(0.3s ease-in-out);
+                h4 {                   
+                 font-weight:bold;
+                 margin-bottom:15px;
+                }
+                h6{
+                    font-weight:normal;
+                    font-size:2rem;
+                }
+            }
+        }
+        &:last-child {
+            @include media-breakpoint-down(md) {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+
+.member-details-section{    
+    .member-img {
+        margin-right: 50px;
+        box-shadow: 0px 5px 15px #00000014;
+        border-radius: 235px;
+        position: relative;
+        height: 0;
+        width: 100%;
+        padding-top: 109%;
+        max-width: 89%;
+        overflow: hidden;
+        @include media-breakpoint-down(md) {
+            margin: 0 auto 30px;
+            max-width: 90%;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    ul.social-nav {
+        display:flex;
+        align-items:center;
+        li{            
+            padding-left:0;
+            &:before{
+                background: none;
+            }
+            margin: 0 5px;
+            a{
+                padding: 5px;                    
+                font-size:23px;
+                text-decoration: none;              
+                img {
+                max-width: 25px;
+                margin-right:5px;
+                }
+            }
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .col-md-12 {
+        margin-top: 30px;
+        @include media-breakpoint-down(lg) {
+            margin-top:20px;            
+        }
+    }
+}	
+
+.get-in-touch{  
+    &:before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 50%;
+        max-width: 1290px;
+        height: 1px;
+        transform: translate(-50%, -50%);                        
+        width:95%;
+        @include media-breakpoint-down(xl) {       
+            width:90%;            
+        }             
+    }
+    .location-wrap{        
+        padding-right: 55px;        
+        ul{
+            margin-top:40px;       
+            li {
+                display: inline-flex;
+                line-height:22px;
+                margin-bottom: 20px;
+                i {
+                    margin-right: 11px;                   
+                }
+                a {
+                    text-decoration: none;                  
+                }
+            }        
+        }
+    }
+}

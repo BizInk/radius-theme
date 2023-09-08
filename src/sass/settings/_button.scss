@@ -1,0 +1,43 @@
+.btn, .btn-secondary, .button {
+  background-color:$red;
+  color:$white;
+  border-color: $red;
+  &.btn-outline-navyblue {
+    color: $red;
+    border-color: $red;
+    border:1px solid $red;  
+    background-color:transparent;
+    &:hover{
+      background-color: $red;
+      color:$white;      
+      border-color:$red;  
+    }
+  }
+  &:hover{ 
+    background-color:$orange; 
+    color:$white;
+    border-color:$orange;
+  }
+}
+ 
+.orange-btn, .button {
+  background-color: $orange;
+  color: $white;
+  border-color:$orange;
+  &:hover {
+    background-color:$red;
+    color:$white;
+    border-color:$red;
+  }
+}
+
+.dark-blue {
+  background-color: $primary;
+  color: $white;
+  border-color:$primary;  
+  &:hover {
+    background-color: $red;
+    color: $white;
+    border-color:$red;
+  }
+}

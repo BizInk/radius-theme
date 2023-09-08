@@ -1,0 +1,139 @@
+%ul-listing{
+    margin: 0px 0 1rem;
+    padding: 0px;
+    text-align: left;
+    li {
+        list-style: none;
+        padding-left:4rem;
+        position: relative;
+        margin-bottom:10px;
+        &:before {
+            font-family: 'Fontawesome';
+            content: '\f00c';
+            font-size: 30px;
+            line-height: 1;            
+            font-weight:$font-weight-normal;                       
+            position: absolute; 
+            left: 0;
+            top: 0.2rem;            
+            @include media-breakpoint-down(lg) {            
+            }
+        }
+    }
+}
+%ol-listing{ 
+    margin: 0px 0 1rem;
+    padding: 0px;
+    text-align: left;
+    counter-reset: li;
+    li{
+        list-style-position: inside;
+        padding-left: 30px;
+        position: relative;
+        margin-bottom:10px;
+        &::marker{
+            display: none;
+            content: none;
+        }
+        &:before {
+            content: counters(li, '.') '. ';
+            counter-increment: li;
+            position: absolute;
+            left: 0;
+            top:1rem;
+        }
+    }
+}
+%blockquote{ 
+    font-size:2rem;
+    font-style: italic;
+    margin: 15px 0;
+    padding-left: 15px;   
+    position: relative;    
+    text-align: left;
+    p{
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.default-content, .editor-design{
+	font-size: 2rem; //20px
+	line-height: 1.5;
+    @include media-breakpoint-down(lg) {
+        font-size: 1.6rem; //16px
+    }
+    p, ul, li, ol, span{
+        font-size: 2rem; //20px
+        line-height: 1.5;
+        @include media-breakpoint-down(lg) {
+            font-size: 1.6rem; //16px
+        }
+    }
+    p{
+        margin-bottom:2rem;
+    }
+	ul{
+		@extend %ul-listing;
+	}
+	ol{
+        @extend %ol-listing;
+	}
+	a:not(.btn){		
+        text-decoration: none;		
+	}    
+	blockquote{
+        @extend %blockquote;
+	}
+
+    .btn {
+        margin-top: 20px;
+        + .btn{
+            margin-left: 15px;
+        }
+    }
+    p + .btn{
+        margin-top: 15px;
+        @include media-breakpoint-down(md) {
+            margin-top: 10px;
+        }
+    }
+	h1, h2, h3, h4, h5{		
+	  	margin-top: 20px;
+	  	margin-bottom: 15px;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+        }
+        > span{
+            font-size: inherit;
+            line-height: inherit;
+        }
+	}
+	&.content-md{
+        font-size: 1rem;
+		p, ul, li, ol, a:not(.btn), span{
+			font-size: 1.6rem;
+			line-height: 1.4;
+		}
+	}
+}
+
+
+.full-width-wysiwyg{
+    position: relative; 
+    margin-bottom:60px;  
+    @include media-breakpoint-down(md){
+        margin-bottom:40px;          
+    }   
+    .editor-design{        
+        max-width:1040px;
+        margin:0 auto 30px;    
+        a:not(.btn){		
+            text-decoration: none;		
+        }  
+        .post-meta span {
+            padding: 0 7px;
+        }   
+    }
+} 

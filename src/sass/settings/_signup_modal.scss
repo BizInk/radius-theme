@@ -1,0 +1,16 @@
+.signup_modal {
+	.form-wrap {
+		background: $primary;
+		.modal-header {
+			.btn-close {
+				background: $white;
+			}
+		}
+		h2 {
+			color: $white;
+		}
+		.gform_wrapper.gravity-theme .gfield-choice-input+label {
+			color: $white;
+		}
+	}
+}

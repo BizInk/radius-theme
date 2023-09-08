@@ -1,0 +1,17 @@
+.call-to-action-section {
+  &:before{
+    background-color:rgba($primary, 0.8);
+  }
+.full-width-wysiwyg .editor-design {
+    p {
+        color: $white;
+    }
+}
+.btn{
+    &:hover{
+        background-color:$white;
+        color:$primary;
+        border-color:$white;
+    }
+    }
+}

@@ -1,0 +1,27 @@
+.video-banner-section {
+    .btn-groups {       
+        .play-video{
+             a {                
+                h5 {
+                    color:$dark;
+                }
+                span {
+                    background:$red; 
+                    color:$dark;                   
+                } 
+                &:hover{
+                    span {
+                        background:$primary;
+                        color:$white;                    
+                    }
+                    h5 {
+                        color:$primary;
+                    }
+                }
+            }   
+        }
+    }  
+     .video-img-wrap {       
+        background:transparent;        
+    }   
+ }

@@ -1,0 +1,112 @@
+.testimonial-section{
+    .testimonial-bg{
+        background-color:$primary;
+    }
+    .testimonial-slider {       
+        .testimonial-slide > div {          
+            .client-text-wrap {
+                color:$white;
+                span{
+                    color: rgba($white, 0.5);
+                }            
+                a{
+                    color:$white;                   
+                }
+            }
+        }
+    }
+}
+.testimonial-list{  
+    h2{
+        color:$white;
+    }
+    .xl-font-wrap .xl-font {              
+        -webkit-text-stroke-color: $white;
+        -webkit-text-fill-color: transparent;
+    }
+         
+    .our-word{     
+        p,span{   
+            color:$white;
+        }
+        .card-wrap{                              
+            .star-wrap {
+                color:$orange;                    
+            }   
+            .client-word-wrap {
+                border-bottom: 1px solid $light-gray;                                   
+                &:after {                        
+                    border-top: 10px solid $light-gray;                        
+                }
+            }
+            .client-details {
+                h5{
+                   color:$white;
+                }
+                span{
+                    color:$orange;
+                }
+            }
+        }
+    } 
+     &.testimonial-all-list{
+        .our-word {
+            p,span{   
+                 color:$primary;
+            } 
+             .client-details {               
+                h5{
+                   color:$primary;
+                }
+                span{
+                    color:$red;
+                }
+            }
+            &:before{
+                 background:$primary;
+            }
+            &:hover{
+                p{   
+                 color:$white;
+                 opacity:0.1;
+                }              
+                img.quote-img{
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(140deg) brightness(122%) contrast(115%);
+                    opacity:0.1;                    
+                }
+            }
+        }
+    }          
+} 
+.testimonial-list.testimonial-all-list{
+    &.single-testimonial {       
+        .our-word{           
+            &:before{
+                display:none;
+            }
+            &:hover{
+                p{   
+                 color:$primary;
+                 opacity:1;
+                }              
+                img.quote-img{
+                    filter:unset;
+                    opacity:1;
+                }
+            }
+        }
+    }
+}
+
+.single-testimonial-banner{
+    img.quote-img{
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(140deg) brightness(122%) contrast(115%);        
+    }
+    .star-wrap, .client-content span {
+        color:$orange;
+    }
+
+    .client-word-full-wrap, .client-content h5 {
+        color:$white;
+    }
+} 

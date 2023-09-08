@@ -1,0 +1,88 @@
+.pricing-section {  
+  h4{   
+    margin-bottom:0;
+    @include media-breakpoint-down(md){
+      font-size:2rem;
+    }
+  }
+
+  .card {
+    border: 0;   
+    border-radius: 10px;
+    padding: 20px 25px 30px;
+    height:100%;
+    .card-header {
+      background: transparent;
+      border: none;
+      padding: 20px 0 0 0 ;
+      text-align:center;
+      p{
+        margin:2rem 0 3rem;
+      }
+      h5{
+        font-weight:normal;
+        font-size:31px;
+      }
+      h2{
+        font-size:6rem;
+        line-height:6.1rem;    
+        padding-bottom:30px;
+        font-family: Poppins,sans-serif;
+        color: #427cd4;
+        @include media-breakpoint-down(lg){
+          font-size:6rem;
+        }
+        sup{
+          font-size:1.8rem;
+          line-height:1.5rem;
+          top: -3.2rem;
+          margin-right: 5px;
+          @include media-breakpoint-down(lg){
+          top: -2rem;
+          }
+
+        }
+        small{
+          font-size: 1.8rem;
+          line-height: 3rem;
+          font-weight: 400;
+          position: relative;
+          left: -30px;
+        }
+      }
+    }
+    .card-body{
+      margin: 0 40px 30px;
+      padding-top: 40px;
+      ul {
+        font-size: 1.6rem;
+        li{
+          margin-bottom: 15px;   
+          &:last-child{
+            margin-bottom:0;
+          }   
+          span {
+            margin-left: 20px;
+          }
+        }        
+      }
+      @include media-breakpoint-down(md){
+        margin:10px 0;
+      }
+    }
+    .card-footer {
+      border: 0;
+      background: transparent;    
+      text-align: center;
+      .btn{
+        @include media-breakpoint-down(xl){
+            min-width:auto;
+            padding:14px 45px;
+            font-size: 1.6rem;
+        }
+      }  
+    }
+    &:hover{
+    }
+  }
+}

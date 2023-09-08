@@ -1,0 +1,67 @@
+.no-results{    
+    .page-header{
+        h1{
+            color:$primary;           
+        }
+    }
+    .search-form{        
+        .input-group{                    
+            .submit{              
+                color: $white;                
+                background-color:$primary;                
+                &:hover, &:focus{
+                    background-color: $dark;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+}
+
+.search-results{
+    .page-header{
+        .page-title{
+            color: $orange;
+        }
+    }
+    h2.entry-title{              
+        a{
+            color: $primary;        
+            &:hover, &:focus{
+                color: $orange;
+            }
+        }       
+    }
+    article{        
+        border-bottom: 1px solid $primary;
+        .btn{           
+            background-color:$primary;
+            color:$white;
+            border:1px solid $primary;           
+            &:hover {              
+              border:1px solid $red;            
+              background-color:$red;
+            }
+        }
+        a:not(.btn){
+            color: $primary;           
+            &:hover, &:focus{
+                color: $red;                
+            }
+        }       
+    }
+    .page-item.active .page-link {        
+        color:$white;
+        background-color:$primary;
+        border-color:$primary;
+    }
+    .page-link{
+        color:$primary;
+        &:hover{
+            background-color:$primary;
+            border-color:$primary;
+            color:$white;
+        }
+    }    
+}
