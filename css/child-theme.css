@@ -17535,6 +17535,7 @@ button:focus {
 @media (max-width: 767.98px) {
   .top-nav ul li a {
     padding: 5px 0;
+    font-size: 13px;
   }
 }
 .top-nav ul li a img {
@@ -17559,6 +17560,11 @@ button:focus {
 .top-nav .container .client-btn-wrap {
   display: flex;
   align-items: center;
+}
+@media (max-width: 767.98px) {
+  .top-nav .container .client-btn-wrap {
+    font-size: 1.3rem;
+  }
 }
 .top-nav .container .client-btn-wrap .btn, .top-nav .container .client-btn-wrap .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .top-nav .container .client-btn-wrap a.button, .top-nav .container .client-btn-wrap .woocommerce-info a.button, .woocommerce-info .top-nav .container .client-btn-wrap a.button, .top-nav .container .client-btn-wrap .wpcf7 input[type=submit], .wpcf7 .top-nav .container .client-btn-wrap input[type=submit] {
   padding: 7px 44px;
@@ -17610,7 +17616,7 @@ button:focus {
 }
 @media (max-width: 767.98px) {
   .top-nav .container .client-btn-wrap .client-area-wrap .client-area-cont {
-    top: 6.8rem;
+    top: 2.8rem;
   }
 }
 .top-nav .container .client-btn-wrap .client-area-wrap .client-area-cont ul li a {
@@ -17645,6 +17651,19 @@ button:focus {
 .top-nav .container .header-contact ul li a i {
   font-size: 16px;
   margin-right: 6px;
+}
+@media (max-width: 767.98px) {
+  .top-nav .container .header-contact ul li a i {
+    font-size: 1.3rem;
+  }
+}
+.top-nav .container .header-contact ul li a svg {
+  margin-right: 6px;
+}
+@media (max-width: 767.98px) {
+  .top-nav .container .header-contact ul li a svg {
+    width: 11px;
+  }
 }
 .top-nav .container .header-contact ul li a:hover {
   text-decoration: underline;
@@ -18817,12 +18836,12 @@ footer .disclamer-wrap {
   padding: 20px;
   display: inline-flex;
   text-decoration: none;
-  width: 50px;
+  width: 80px;
   height: 50px;
   align-items: center;
   justify-content: center;
   margin: 0 10px;
-  font-size: 24px;
+  font-size: 17px;
   font-weight: 600;
 }
 @media (max-width: 767.98px) {
@@ -19540,6 +19559,12 @@ body .gform_confirmation_message {
   .counter-section {
     padding: 40px 0;
   }
+}
+.counter-section .text-start .counter-wrap {
+  justify-content: flex-start;
+}
+.counter-section .text-end .counter-wrap {
+  justify-content: flex-end;
 }
 .counter-section .counter-wrap {
   text-align: center;
@@ -21500,6 +21525,62 @@ header + .video-banner-section.comman-margin {
   }
   .video-banner-section .row.video-common-col .col-lg-3 {
     margin-top: 3rem;
+  }
+}
+
+.video-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.video-wrap:before {
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.video-wrap i.fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  line-height: 68px;
+  box-shadow: 0px 0px 14px 5px;
+  border-radius: 100%;
+  z-index: 9;
+}
+@media (max-width: 991.98px) {
+  .video-wrap i.fa {
+    font-size: 50px;
+    line-height: 40px;
+  }
+}
+
+.featured-video-section .video-wrap {
+  border-radius: 20px;
+  height: 400px;
+}
+.featured-video-section .video-wrap img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media (max-width: 991.98px) {
+  .featured-video-section .video-wrap {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .featured-video-section .video-content {
+    padding: 0 70px;
+  }
+}
+@media (max-width: 991.98px) {
+  .featured-video-section .video-content {
+    padding: 20px;
   }
 }
 

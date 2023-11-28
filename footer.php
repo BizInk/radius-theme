@@ -35,6 +35,9 @@ $copyright_information = get_field('copyright_information', 'options');
 
 $global_logo_bg_title = get_field('global_logo_bg_title', 'options');
 $global_logo_small_title = get_field('global_logo_small_title', 'options');
+
+$newsletter_bg_title = get_field('newsletter_bg_title', 'options');
+$newsletter_small__title = get_field('newsletter_small__title', 'options');
 $newsletter_title = get_field('newsletter_title', 'options');
 $newsletter_content = get_field('newsletter_content', 'options');
 $gravity_forms = get_field('gravity_forms', 'options');
@@ -47,14 +50,14 @@ $gravity_forms = get_field('gravity_forms', 'options');
                 <div class="full-width-wysiwyg text-left">
                     <div class="editor-design"> 
                         <div class="xl-font-wrap">
-                        	<?php if( !empty($global_logo_bg_title) ){ ?>
+                        	<?php if( !empty($newsletter_bg_title) ){ ?>
 
-								<div class="xl-font"><?php echo $global_logo_bg_title; ?></div>
+								<div class="xl-font"><?php echo $newsletter_bg_title; ?></div>
 							<?php }
 
-							if( !empty($global_logo_small_title) ){ ?>
+							if( !empty($newsletter_small__title) ){ ?>
 
-								<h6><?php echo $global_logo_small_title; ?></h6>
+								<h6><?php echo $newsletter_small__title; ?></h6>
 							<?php } ?>
 						</div>
 
@@ -118,9 +121,17 @@ if( have_rows('global_logos', 'options') ): ?>
                     if( !empty($global_logo['url']) ){ ?>
 
                         <div class="logo">
-                            <a href="<?php echo $global_link ?>" target="_blank">
+                        	<?php if( !empty($global_link) ){ ?>
+                            	
+                            	<a href="<?php echo $global_link; ?>" target="_blank">
+                            <?php } ?>
+                            
                                 <img src="<?php echo $global_logo['url']; ?>" class="img-fluid" alt="<?php echo $global_logo['alt']; ?>">
-                            </a>
+                        	
+                        	<?php if( !empty($global_link) ){ ?>
+                            	
+                            	</a>
+                            <?php } ?>
                         </div>
                     <?php }
                 endwhile; ?>
@@ -192,7 +203,9 @@ if( have_rows('global_logos', 'options') ): ?>
 
 						if( !empty($twitter) ){ ?>
 							
-							<li><a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="<?php echo $twitter; ?>" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+ 							 <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+							</svg></a></li>
 						<?php }
 
 						if( !empty($linkedin) ){ ?>

@@ -17,11 +17,11 @@ $logo_title = get_sub_field('logo_title');
 
 if( have_rows('logo') ): ?>
 
-    <section class="logo-section text-center<?= $general_class; ?>">
+    <section class="logo-section text-center<?php echo $general_class; ?>">
         <div class="full-width-wysiwyg text-center">
             <div class="container">
                 <div class="editor-design">
-                    <?= !empty($logo_title) ? '<h2>'. $logo_title .'</h2>' : null; ?>
+                    <?php echo !empty($logo_title) ? '<h2>'. $logo_title .'</h2>' : null; ?>
                 </div>
             </div>
         </div>
@@ -36,9 +36,17 @@ if( have_rows('logo') ): ?>
                     if( !empty($slider_image) ){ ?>
 
                         <div class="logo">
-                            <a href="<?= $logo_url ?>">
+                            <?php if( !empty($logo_url) ){ ?>
+                                
+                                <a href="<?php echo $logo_url; ?>">
+                            <?php } ?>
+                                
                                 <img src="<?php echo $slider_image; ?>" class="img-fluid" alt="">
-                            </a>
+                                
+                            <?php if( !empty($logo_url) ){ ?>
+                                
+                                </a>
+                            <?php } ?>
                         </div>
                     <?php }
                 endwhile; ?>

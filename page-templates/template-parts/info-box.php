@@ -2,6 +2,7 @@
 <?php
 $general_settings = get_sub_field('general_settings');
 $alignment = get_sub_field_object('alignment');
+$column_count = get_sub_field('column_count');
 $info_box_bg_title = get_sub_field('info_box_bg_title');
 $info_box_small_title = get_sub_field('info_box_small_title');
 $info_box_title = get_sub_field('info_box_title');
@@ -73,7 +74,7 @@ if( have_rows('information_box') ):
 								$info_description = get_sub_field('info_description'); 
 								$info_button = get_sub_field('info_button');
 								?>
-								<div class="col-md-6 col-lg-4">
+								<div class="<?php echo $column_count; ?>">
 									<div class="info-box h-100 <?php echo $align_class ?>">
 
 										<?php if( !empty($info_image) ) { ?>

@@ -726,6 +726,67 @@ function wpdocs_custom_init() {
 	);
 
 	register_post_type( 'landing-page', $landing_page_args );
+
+	// CPT registration
+	$videos_labels = array(
+		'name'                  => _x( 'Videos', 'Post type general name', 'understrap-child' ),
+		'singular_name'         => _x( 'Video', 'Post type singular name', 'understrap-child' ),
+		'menu_name'             => _x( 'Videos', 'Admin Menu text', 'understrap-child' ),
+		'name_admin_bar'        => _x( 'Video', 'Add New on Toolbar', 'understrap-child' ),
+		'add_new'               => __( 'Add New', 'understrap-child' ),
+		'add_new_item'          => __( 'Add New Video', 'understrap-child' ),
+		'new_item'              => __( 'New Video', 'understrap-child' ),
+		'edit_item'             => __( 'Edit Video', 'understrap-child' ),
+		'view_item'             => __( 'View Video', 'understrap-child' ),
+		'all_items'             => __( 'All Videos', 'understrap-child' ),
+		'search_items'          => __( 'Search Videos', 'understrap-child' ),
+		'parent_item_colon'     => __( 'Parent Videos:', 'understrap-child' ),
+		'not_found'             => __( 'No videos found.', 'understrap-child' ),
+		'not_found_in_trash'    => __( 'No videos found in Trash.', 'understrap-child' )
+	);
+
+	$videos_args = array(
+		'labels'             => $videos_labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'menu_icon'			 => 'dashicons-video-alt3',
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'video' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'thumbnail' )
+	);
+
+	register_post_type( 'video', $videos_args );
+
+	$videos_cat = array(
+		'name'              => _x( 'Categories', 'taxonomy general name', 'understrap-child' ),
+		'singular_name'     => _x( 'Category', 'taxonomy singular name', 'understrap-child' ),
+		'search_items'      => __( 'Search Categories', 'understrap-child' ),
+		'all_items'         => __( 'All Categories', 'understrap-child' ),
+		'parent_item'       => __( 'Parent Category', 'understrap-child' ),
+		'parent_item_colon' => __( 'Parent Category:', 'understrap-child' ),
+		'edit_item'         => __( 'Edit Category', 'understrap-child' ),
+		'update_item'       => __( 'Update Category', 'understrap-child' ),
+		'add_new_item'      => __( 'Add New Category', 'understrap-child' ),
+		'new_item_name'     => __( 'New Category Name', 'understrap-child' ),
+		'menu_name'         => __( 'Category', 'understrap-child' ),
+	);
+
+	$videos_cat_args = array(
+		'hierarchical'      => true,
+		'labels'            => $videos_cat,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'video_cat' ),
+	);
+
+	register_taxonomy( 'video_cat', array( 'video' ), $videos_cat_args );
 }
 
 // Adding option to select gravity form in ACF
@@ -965,12 +1026,3 @@ function luca_excerpt_length( $length ) {
 }
 
 include_once('inc/custom-widget.php');
-
-// Theme Updater
-require 'plugin-update-checker/plugin-update-checker.php';
-use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
-$myUpdateChecker = PucFactory::buildUpdateChecker('https://github.com/BizInk/radius-theme',__FILE__,'radius-theme');
-// Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('master');
-// Using a private repository, specify the access token 
-$myUpdateChecker->setAuthentication('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');

@@ -17,15 +17,12 @@ $navbar_type       = get_theme_mod('understrap_navbar_type', 'collapse');
 $company_phone = get_field('company_phone', 'options');
 $company_email = get_field('company_email', 'options');
 
-$facebook_icon = get_field('facebook_icon', 'options'); 
 $facebook = get_field('facebook', 'options'); 
-$twitter_icon = get_field('twitter_icon', 'options'); 
 $twitter = get_field('twitter', 'options'); 
-$linkedin_icon = get_field('linkedin_icon', 'options'); 
 $linkedin = get_field('linkedin', 'options'); 
 $instagram = get_field('instagram', 'options');
 $youtube = get_field('youtube', 'options');
-$google_my_business = get_field('google_my_business', 'options');
+$header_client_button = get_field('header_client_button', 'options');
 
 ?>
 <!DOCTYPE html>
@@ -81,7 +78,9 @@ $google_my_business = get_field('google_my_business', 'options');
 
 								if( !empty($twitter) ){ ?>
 									
-									<li><a href="<?= $twitter; ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="<?= $twitter; ?>" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  									<path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+									</svg></a></li>
 								<?php }
 
 								if( !empty($linkedin) ){ ?>
@@ -121,7 +120,11 @@ $google_my_business = get_field('google_my_business', 'options');
 								} ?>
 							</div>
 						</div>
-						<a href="#" class="btn"> Book A Meeting </a>
+
+						<?php if( !empty($header_client_button['url']) && !empty($header_client_button['title']) ){ ?>
+
+							<a href="<?php echo $header_client_button['url']; ?>" class="btn" target="<?php echo $header_client_button['target']; ?>"><?php echo $header_client_button['title']; ?></a>
+						<?php } ?>
 					</div>										
 				</div>
 			</div>

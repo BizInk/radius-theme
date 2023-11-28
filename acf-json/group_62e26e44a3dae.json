@@ -89,7 +89,32 @@
                             "return_format": "value",
                             "allow_null": 0,
                             "other_choice": 0,
-                            "layout": "vertical",
+                            "layout": "horizontal",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_6555eca2f1fd9",
+                            "label": "Column Count",
+                            "name": "column_count",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "col-md-6": "Two Columns",
+                                "col-md-6 col-lg-4": "Three Columns"
+                            },
+                            "default_value": "col-md-6 col-lg-4",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
                             "save_other_choice": 0
                         },
                         {
@@ -812,6 +837,7 @@
                                     },
                                     "choices": {
                                         "5": "Get in Touch Member",
+                                        "6": "Got a question",
                                         "4": "Lead Magnet",
                                         "3": "Newsletter Form",
                                         "1": "Request a Quote",
@@ -898,7 +924,7 @@
                                 },
                                 {
                                     "key": "field_64d22c2e9a91a",
-                                    "label": "Trophy Image",
+                                    "label": "Icon",
                                     "name": "",
                                     "aria-label": "",
                                     "type": "tab",
@@ -916,7 +942,7 @@
                                 },
                                 {
                                     "key": "field_64d22c3c9a91b",
-                                    "label": "Trophy Image",
+                                    "label": "Icon",
                                     "name": "column_trophy_image",
                                     "aria-label": "",
                                     "type": "image",
@@ -1229,6 +1255,32 @@
                             "return_format": "value",
                             "save_custom": 0,
                             "custom_choice_button_text": "Add new choice"
+                        },
+                        {
+                            "key": "field_6555f0383ad5e",
+                            "label": "Alignment",
+                            "name": "alignment",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "text-start": "Left",
+                                "text-center": "Center",
+                                "text-end": "Right"
+                            },
+                            "default_value": "text-center",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
                         },
                         {
                             "key": "field_6401bf0c81b88",
@@ -2693,5 +2745,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693286167
+    "modified": 1700131528
 }

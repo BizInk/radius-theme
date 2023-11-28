@@ -1,5 +1,6 @@
 <?php 
 $general_settings = get_sub_field('general_settings'); 
+$alignment = get_sub_field('alignment'); 
 $counter_title = get_sub_field('counter_add_title');
 $counter_description = get_sub_field('counter_add_description');
 
@@ -40,7 +41,7 @@ if( in_array('Add Common Margin', $general_settings) ){
     </div>
   </div>  
   <div class="container">
-    <div class="row text-center gy-5 g-md-0">
+    <div class="row <?php echo $alignment; ?> gy-5 g-md-0">
       <?php if( have_rows('counter') ): ?>
       <?php while( have_rows('counter') ): the_row(); ?>
       <?php
