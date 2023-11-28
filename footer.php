@@ -264,8 +264,8 @@ if( have_rows('global_logos', 'options') ): ?>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="copyright-wrap">
-							<?php echo do_shortcode($copyright_information); ?>
+						<div class="copyright-wrap" style="color:<?php echo get_field('copyright_color', 'options') ? get_field('copyright_color', 'options') : '#fefefe'; ?>;">
+							<?php echo do_shortcode($copyright_information); ?> | <a style="color:<?php echo get_field('copyright_color', 'options') ? get_field('copyright_color', 'options') : '#fefefe'; ?>;" target="_blank" href="https://www.bizinkonline.com"><?php _e('Website By Bizink','radius-theme');?>
 						</div>
 					</div>
 				</div>
