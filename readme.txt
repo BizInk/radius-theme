@@ -15,7 +15,10 @@ The Radius theme
 
 = 1.1 =
 * Update Twitter to X
-
+* Info Boxes Fix
+* Two Collumns Fix
+* Added Counter
+* Update Header Client Button
 
 = 1.0 =
 * First Realease
