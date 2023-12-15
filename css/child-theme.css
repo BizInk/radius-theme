@@ -19662,21 +19662,16 @@ body .gform_confirmation_message {
 .call-to-action-section .full-width-wysiwyg .container {
   position: relative;
   z-index: 2;
-}
-.call-to-action-section .full-width-wysiwyg .container .editor-design {
-  max-width: 50%;
-  margin-left: unset;
-  margin-bottom: 0;
+  padding-right: 50%;
 }
 @media (max-width: 1199.98px) {
-  .call-to-action-section .full-width-wysiwyg .container .editor-design {
-    max-width: 80%;
+  .call-to-action-section .full-width-wysiwyg .container {
+    padding-right: 15px;
   }
 }
-@media (max-width: 767.98px) {
-  .call-to-action-section .full-width-wysiwyg .container .editor-design {
-    max-width: 100%;
-  }
+.call-to-action-section .full-width-wysiwyg .container .editor-design {
+  margin-left: unset;
+  margin-bottom: 0;
 }
 .call-to-action-section .full-width-wysiwyg .container .editor-design h1, .call-to-action-section .full-width-wysiwyg .container .editor-design .h1 {
   margin-bottom: 3rem;

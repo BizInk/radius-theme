@@ -630,6 +630,26 @@
             "return_format": "array"
         },
         {
+            "key": "field_6571488183bf3",
+            "label": "Client Area Toggle",
+            "name": "client_area_toggle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_645b8289cde60",
             "label": "Global Logos",
             "name": "",
@@ -1146,5 +1166,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1700133320
+    "modified": 1701922960
 }

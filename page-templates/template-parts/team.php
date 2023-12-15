@@ -24,6 +24,7 @@ $team_small_title = get_sub_field('team_small_title');
 $team_title = get_sub_field('team_title');
 $team_content = get_sub_field('team_content');
 $team_members = get_sub_field('team_members');
+$team_button = get_sub_field('team_button');
 
 if( !empty($team_members) ){ ?>
 
@@ -49,8 +50,12 @@ if( !empty($team_members) ){ ?>
 							<h2><?php echo do_shortcode($team_title); ?></h2>
 						<?php }
 
-						echo do_shortcode($team_content); ?>
-						
+						echo do_shortcode($team_content);
+
+						if( !empty($team_button['title']) && !empty($team_button['url']) ){ ?>
+
+							<a href="<?php echo $team_button['url']; ?>" target="<?php echo $team_button['target']; ?>"><?php echo $team_button['title']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						<?php } ?>						
 					</div>
 				</div>
 

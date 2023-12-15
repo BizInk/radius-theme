@@ -468,8 +468,26 @@
                             "return_format": "value",
                             "allow_null": 0,
                             "other_choice": 0,
-                            "layout": "vertical",
+                            "layout": "horizontal",
                             "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_656d5b2f83892",
+                            "label": "Background Color",
+                            "name": "full_width_bg",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string"
                         },
                         {
                             "key": "field_63fc3c69ce709",
@@ -2709,6 +2727,22 @@
                             "bidirectional": 0,
                             "ui": 1,
                             "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_656d4c2a8f7eb",
+                            "label": "Button",
+                            "name": "team_button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
                         }
                     ],
                     "min": "",
@@ -2745,5 +2779,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1700131528
+    "modified": 1701665839
 }

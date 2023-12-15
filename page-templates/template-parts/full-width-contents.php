@@ -1,6 +1,7 @@
 <?php
 $general_settings = get_sub_field('general_settings');
 $alignment = get_sub_field_object('alignment');
+$full_width_bg = get_sub_field('full_width_bg');
 $small_title = get_sub_field('full_width_section_small_title');
 $large_title = get_sub_field('full_width_section_title');
 $contents = get_sub_field('full_width_section_content');
@@ -31,9 +32,15 @@ if( $alignment['value'] == "Align center" ){
 	$align_class .= 'text-center';
 }
 
+$background_html = '';
+if( !empty($full_width_bg) ){
+
+	$background_html = ' style="background-color: '. $full_width_bg .'"';
+}
+
 ?>
 
-<section class="full-width-section comman-margin">
+<section class="full-width-section comman-margin"<?php echo $background_html; ?>>
 	<div class="full-width-wysiwyg <?php echo $general_class?>">
 		<div class="container">
 			<div class="editor-design <?php echo $align_class ?> ">

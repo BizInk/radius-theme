@@ -14,9 +14,10 @@ $member_phone = get_field('member_phone');
 $member_email = get_field('member_email'); 
 $member_address = get_field('member_address'); 
 
-$member_facebook = get_field('member_facebook'); 
-$member_twitter = get_field('member_twitter'); 
+$member_facebook = get_field('member_facebook');
+$member_twitter = get_field('member_twitter');
 $member_linkedin = get_field('member_linkedin'); 
+$member_instagram = get_field('member_instagram');
 ?>
 
 <section class="member-details-section comman-margin">
@@ -62,7 +63,7 @@ $member_linkedin = get_field('member_linkedin');
                     </div>
                     <?php echo $member_full_profile; ?>
 
-                    <?php if( !empty($member_facebook) || !empty($member_twitter) || !empty($member_linkedin) ){ ?>
+                    <?php if( !empty($member_facebook) || !empty($member_twitter) || !empty($member_instagram) || !empty($member_linkedin) ){ ?>
 
                         <div class="social-wrap">
                           <h5>Follow me:</h5>
@@ -72,7 +73,7 @@ $member_linkedin = get_field('member_linkedin');
 
                                     <li><a href="<?php echo $member_facebook; ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <?php }
-
+                                
                                 if( !empty($member_twitter) ){ ?>
 
                                     <li><a href="<?php echo $member_twitter; ?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -80,7 +81,12 @@ $member_linkedin = get_field('member_linkedin');
 
                                 if( !empty($member_linkedin) ){ ?>
 
-                                    <li><a href="<?php echo $member_linkedin; ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="<?php echo $member_linkedin; ?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <?php }
+
+                                if( !empty($member_instagram) ){ ?>
+
+                                    <li><a href="<?php echo $member_instagram; ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                 <?php } ?>
                             </ul>
                         </div>

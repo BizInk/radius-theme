@@ -23,6 +23,7 @@ $linkedin = get_field('linkedin', 'options');
 $instagram = get_field('instagram', 'options');
 $youtube = get_field('youtube', 'options');
 $header_client_button = get_field('header_client_button', 'options');
+$client_area_toggle = get_field('client_area_toggle', 'options');
 
 ?>
 <!DOCTYPE html>
@@ -104,7 +105,7 @@ $header_client_button = get_field('header_client_button', 'options');
 					</div>	
 					<div class="client-btn-wrap">					
 						<div class="client-area-wrap">
-							<div class="client-area-anchor">Client <i class="fa fa-bars" aria-hidden="true"></i></div>
+							<div class="client-area-anchor"><?php echo !empty($client_area_toggle) ? $client_area_toggle : 'Client Area'; ?> <i class="fa fa-bars" aria-hidden="true"></i></div>
 							<div class="client-area-cont">
 								<?php
 								if( has_nav_menu('client-area') ){

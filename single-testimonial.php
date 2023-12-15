@@ -20,7 +20,7 @@ $reviewer_name = get_field('reviewer_name');
                 </div>
             <?php } ?>
 
-            <div class="col-md-7">
+            <div class="col-md-12">
                 <div class="col-md-12 our-word text-center mt-5 mt-md-0">
                     <div class="card-wrap text-decoration-none d-block">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/quote.png" class="img-fluid quote-img" alt="<?php echo $reviewer_name; ?>">

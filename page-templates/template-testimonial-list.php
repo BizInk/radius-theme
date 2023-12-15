@@ -72,10 +72,7 @@ if( !empty($testimonial_list_testimonials) ){
                                     </div>
                                 </a> 
 
-                                <?php if( !empty($reviewer_button['url']) && !empty($reviewer_button['title']) ){ ?>
-
-                                    <a href="<?php echo $reviewer_button['url']; ?>" class="btn center-btn" target="<?php echo $reviewer_button['target']; ?>"><?php echo $reviewer_button['title']; ?><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                <?php } ?>
+                                <a href="<?php echo get_permalink($testimonial_list_testimonial); ?>" class="btn center-btn">Read More<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         <?php } ?>
                     </div>

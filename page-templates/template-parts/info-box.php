@@ -33,7 +33,7 @@ if( $alignment['value'] == "Align center" ){
 
 if( have_rows('information_box') ):
 	?>
-	<section class="infobox-section<?= $general_class; ?>">
+	<section class="infobox-section<?php echo $general_class; ?>">
 		<div class="section-inner-wrapper">		
 			<div class="full-width-wysiwyg text-center">
 				<div class="container">
@@ -42,19 +42,19 @@ if( have_rows('information_box') ):
 						<div class="xl-font-wrap">
 							<?php if( !empty($info_box_bg_title) ){ ?>
 								
-								<div class="xl-font"><?= $info_box_bg_title; ?></div>
+								<div class="xl-font"><?php echo $info_box_bg_title; ?></div>
 							<?php }
 
 							if( !empty($info_box_small_title) ){ ?>
 
-								<h6><?= $info_box_small_title; ?></h6>
+								<h6><?php echo $info_box_small_title; ?></h6>
 							<?php } ?>
 						</div>
 
 						<?php
 						if( !empty($info_box_title) ){ ?>
 							
-							<h2><?= do_shortcode($info_box_title); ?></h2>
+							<h2><?php echo do_shortcode($info_box_title); ?></h2>
 						<?php }
 
 						echo $info_box_content; ?>
@@ -114,13 +114,13 @@ if( have_rows('information_box') ):
 					<?php if( !empty($info_box_bottom_text) ){ ?>
 
 						<div class="editor-design">
-							<?= $info_box_bottom_text; ?>
+							<?php echo $info_box_bottom_text; ?>
 						</div>
 					<?php }
 
 					if( !empty($info_box_bottom_button['url']) && !empty($info_box_bottom_button['title']) ){ ?>
 
-						<a href="<?= $info_box_bottom_button['url']; ?>" target="<?= $info_box_bottom_button['target']; ?>"> <?= $info_box_bottom_button['title']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						<a href="<?php echo $info_box_bottom_button['url']; ?>" target="<?php echo $info_box_bottom_button['target']; ?>"> <?php echo $info_box_bottom_button['title']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 					<?php } ?>
 				</div>
 			<?php } ?>
