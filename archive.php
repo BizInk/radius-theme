@@ -57,9 +57,8 @@ if( $posts_loop->have_posts() ){ ?>
                                     <a href="<?php the_permalink(); ?>">
                                         <h4 class="member-name"><?php the_title(); ?></h4>
                                     </a>
-
                                     <p><?= $post_content; ?></p>
-                                    <a href="<?php the_permalink(); ?>" class="readmore">Read More</a>
+                                    <a href="<?php the_permalink(); ?>" class="readmore"><?php _e('Read More','radius-theme');?></a>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +92,7 @@ if( $posts_loop->have_posts() ){ ?>
             <?php if( $posts_loop->found_posts > $ppp ){ ?>
                         
                 <div class="d-flex justify-content-center">         
-                    <a href="javascript:void(0);" class="btn posts-loadmore" data-pagenumber="1">Load More</a>
+                    <a href="javascript:void(0);" class="btn posts-loadmore" data-pagenumber="1"><?php _e('Load More','radius-theme');?></a>
                 </div>
             <?php }
             wp_reset_query(); ?>

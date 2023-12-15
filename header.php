@@ -51,8 +51,6 @@ $client_area_toggle = get_field('client_area_toggle', 'options');
 
 		<!-- ******************* The Navbar Area ******************* -->
 		<header id="wrapper-navbar" class="">
-
-
 			<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
 			<div class="top-nav">
 				<div class="container">																
@@ -105,10 +103,14 @@ $client_area_toggle = get_field('client_area_toggle', 'options');
 					</div>	
 					<div class="client-btn-wrap">					
 						<div class="client-area-wrap">
-							<div class="client-area-anchor"><?php echo !empty($client_area_toggle) ? $client_area_toggle : 'Client Area'; ?> <i class="fa fa-bars" aria-hidden="true"></i></div>
+							<?php
+								if( has_nav_menu('client-area') ):
+								$locations = get_nav_menu_locations();
+								$menu = wp_get_nav_menu_object( $locations['client-area'] );
+							?>
+							<div class="client-area-anchor"><?php echo $menu->name ? $menu->name : "Client Area"; ?> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
 							<div class="client-area-cont">
 								<?php
-								if( has_nav_menu('client-area') ){
 
 									wp_nav_menu(
 										array(
@@ -118,12 +120,12 @@ $client_area_toggle = get_field('client_area_toggle', 'options');
 											'fallback_cb' => false
 										)
 									);
-								} ?>
+								?>
 							</div>
+							<?php endif; ?>
 						</div>
 
 						<?php if( !empty($header_client_button['url']) && !empty($header_client_button['title']) ){ ?>
-
 							<a href="<?php echo $header_client_button['url']; ?>" class="btn" target="<?php echo $header_client_button['target']; ?>"><?php echo $header_client_button['title']; ?></a>
 						<?php } ?>
 					</div>										

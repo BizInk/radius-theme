@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Resource
+ * Template Name: OLD Resource
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *

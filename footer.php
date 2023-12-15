@@ -35,112 +35,7 @@ $copyright_information = get_field('copyright_information', 'options');
 
 $global_logo_bg_title = get_field('global_logo_bg_title', 'options');
 $global_logo_small_title = get_field('global_logo_small_title', 'options');
-
-$newsletter_bg_title = get_field('newsletter_bg_title', 'options');
-$newsletter_small__title = get_field('newsletter_small__title', 'options');
-$newsletter_title = get_field('newsletter_title', 'options');
-$newsletter_content = get_field('newsletter_content', 'options');
-$gravity_forms = get_field('gravity_forms', 'options');
 ?>
-
-<section class="newsletter-section">
-    <div class="container">
-        <div class="row flex-column text-center">
-            <div class="col-md-9">
-                <div class="full-width-wysiwyg text-left">
-                    <div class="editor-design"> 
-                        <div class="xl-font-wrap">
-                        	<?php if( !empty($newsletter_bg_title) ){ ?>
-
-								<div class="xl-font"><?php echo $newsletter_bg_title; ?></div>
-							<?php }
-
-							if( !empty($newsletter_small__title) ){ ?>
-
-								<h6><?php echo $newsletter_small__title; ?></h6>
-							<?php } ?>
-						</div>
-
-                        <?php if( !empty($newsletter_title) ){ ?>
-                            
-                            <h2><?php echo $newsletter_title; ?></h2>
-                        <?php }
-
-                        echo $newsletter_content; ?>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-9 col-lg-6">
-                <?php echo !empty($gravity_forms) ? do_shortcode('[gravityform id="'. $gravity_forms .'" title="false"]') : ''; ?>
-            </div>
-        </div>
-        
-    </div>
-</section>
-
-
-<!-- logo-section-start -->
-<?php
-$global_logo_bg_title = get_field('global_logo_bg_title', 'options');
-$global_logo_small_title = get_field('global_logo_small_title', 'options');
-$global_logo_title = get_field('global_logo_title', 'options');
-
-if( have_rows('global_logos', 'options') ): ?>
-
-    <section class="logo-section text-center">
-        <div class="full-width-wysiwyg text-center">
-            <div class="container">
-                <div class="editor-design">
-                	<div class="xl-font-wrap">
-                		<?php if( !empty($global_logo_bg_title) ){ ?>
-
-							<div class="xl-font"><?php echo $global_logo_bg_title; ?></div>	
-						<?php }
-
-						if( !empty($global_logo_small_title) ){ ?>
-
-							<h6><?php echo $global_logo_small_title; ?></h6>
-						<?php } ?>
-					</div>
-
-					<?php if( !empty($global_logo_title) ){ ?>
-
-						<h2><?php echo $global_logo_title; ?></h2>
-                    <?php } ?>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="logo-slider">
-                <?php while( have_rows('global_logos', 'options') ):
-                    the_row();
-
-                    $global_logo = get_sub_field('global_logo');
-                    $global_link = get_sub_field('global_link');
-
-                    if( !empty($global_logo['url']) ){ ?>
-
-                        <div class="logo">
-                        	<?php if( !empty($global_link) ){ ?>
-                            	
-                            	<a href="<?php echo $global_link; ?>" target="_blank">
-                            <?php } ?>
-                            
-                                <img src="<?php echo $global_logo['url']; ?>" class="img-fluid" alt="<?php echo $global_logo['alt']; ?>">
-                        	
-                        	<?php if( !empty($global_link) ){ ?>
-                            	
-                            	</a>
-                            <?php } ?>
-                        </div>
-                    <?php }
-                endwhile; ?>
-            </div>
-        </div>
-    </section>
-<?php endif; ?>
-<!-- logo-section-end -->
-
 
 <footer>
 	<div class="container">
@@ -300,7 +195,6 @@ if( have_rows('global_logos', 'options') ): ?>
 					var result = JSON.parse(response);
 
 					if( pagenumber == 1 ){
-						
 						jQuery('.blog-posts-cont').html(result.content);
 					}else{
 						jQuery('.load-more').remove();

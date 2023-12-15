@@ -16,8 +16,8 @@ $categories = get_terms([
 		<?php if( !empty($categories) ){ ?>
 
 			<div class="filter-wrap">
-				<h4>Select Category</h4>
-					<span class="d-flex justify-content-between align-items-center dropdown">Select</span>
+				<h4><?php _e('Select Category','radius-theme');?></h4>
+					<span class="d-flex justify-content-between align-items-center dropdown"><?php _e('Select','radius-theme');?></span>
 				<ul>
 					<li class="active" data-cat="">ALL</li>
 					<?php foreach( $categories as $category ){ ?>
@@ -28,7 +28,7 @@ $categories = get_terms([
 			</div>
 		<?php } ?>
 		<div class="team-wrap blog-posts-cont">
-			Loading...
+			<?php _e('Loading...','radius-theme');?>
 		</div>
 
 		<script>

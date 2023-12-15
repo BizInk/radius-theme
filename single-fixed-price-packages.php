@@ -63,7 +63,7 @@ $package_details_button_2 = get_field('package_details_button_2');
 <?php 
 $package_left_col_title = get_field('package_left_col_title', 'options');
 $package_left_col_desc = get_field('package_left_col_desc', 'options');
-$gravity_forms = get_field('gravity_forms', 'options');
+$gravity_forms = get_field('package_gravity_forms', 'options');
 $package_right_col_title = get_field('package_right_col_title', 'options');
 $package_right_col_desc = get_field('package_right_col_desc', 'options');
 
