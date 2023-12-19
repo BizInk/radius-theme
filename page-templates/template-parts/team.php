@@ -28,9 +28,9 @@ $team_button = get_sub_field('team_button');
 
 if( !empty($team_members) ){ ?>
 
-	<section class="team-section<?php echo $general_class; ?>"<?php echo $background_tag; ?>>
+	<section class="p-4 team-section<?php echo $general_class; ?>"<?php echo $background_tag; ?>>
 		<div class="container">		
-			<div class="row align-items-center">
+			<div class="mb-4 row align-items-center">
 				<div class="col-md-8 col-lg-6">
 					<div class="default-content">
 						<div class="xl-font-wrap">
@@ -61,32 +61,77 @@ if( !empty($team_members) ){ ?>
 
 				<div class="col-md-12 col-lg-6">
 					<div class="row g-5">
-						<?php foreach( $team_members as $team_member ){
-
+						<?php foreach( $team_members as $index => $team_member ){
+							if( $index > 3 ){
+								break;
+							}
 							$member_image = get_field('member_image', $team_member);
 							$member_position = get_field('member_position', $team_member); ?>
 
 							<div class="col-md-6 team-member">
-								<?php if( !empty($member_image) ){ ?>
-
+								<?php 
+								if( !empty($member_image) ){ ?>
 									<div class="member-img">						
 										<img src="<?php echo $member_image; ?>" class="img-fluid" alt="<?php echo $team_member->post_title; ?>">
 									</div>
+								<?php }
+								else {
+								?>
+									<div class="member-img">						
+										<img src="<?php echo get_stylesheet_directory_uri();?>/images/blank-team-member.jpg" class="img-fluid" alt="<?php echo $team_member->post_title; ?>">
+									</div>
 								<?php } ?>
-
 								<div class="two-col-badge">							
 									<div class="member-details">
 										<h3><?php echo $team_member->post_title; ?></h3>
-										
 										<?php if( !empty($member_position) ){ ?>
-
 											<p><?php echo $member_position; ?></p>
 										<?php } ?>
 									</div>
 								</div>
 							</div>
 						<?php } ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<section class="p-4 team-section<?php echo $general_class; ?>">
+		<div class="container">		
+			<div class="mb-4 row align-items-center">
+				<div class="col-md-12">
+					<div class="row g-5">
+					<?php foreach( $team_members as $index => $team_member ){
+							if( $index < 4 ){
+								continue;
+							}
+							$member_image = get_field('member_image', $team_member);
+							$member_position = get_field('member_position', $team_member); ?>
+
+							<div class="col-md-3 team-member">
+								<?php 
+								if( !empty($member_image) ){ ?>
+									<div class="member-img">						
+										<img src="<?php echo $member_image; ?>" class="img-fluid" alt="<?php echo $team_member->post_title; ?>">
+									</div>
+								<?php }
+								else {
+								?>
+									<div class="member-img">						
+										<img src="<?php echo get_stylesheet_directory_uri();?>/images/blank-team-member.jpg" class="img-fluid" alt="<?php echo $team_member->post_title; ?>">
+									</div>
+								<?php } ?>
+								<div class="two-col-badge">							
+									<div class="member-details">
+										<h3><?php echo $team_member->post_title; ?></h3>
+										<?php if( !empty($member_position) ){ ?>
+											<p><?php echo $member_position; ?></p>
+										<?php } ?>
+									</div>
+								</div>
+							</div>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
