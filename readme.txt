@@ -14,7 +14,8 @@ The Radius theme
 == Changelog ==
 
 = 1.3.1 =
-* 
+* Testimonial flexable layout section
+* Team template flexable layout section
 
 = 1.3 =
 * Fix Form selection issue

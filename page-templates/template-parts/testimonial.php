@@ -1,6 +1,8 @@
 <?php
 $general_settings = get_sub_field('general_settings');
 $background_image = get_sub_field('background_image');
+$background_imagecolor = get_sub_field('background_imagecolor') ? get_sub_field('background_imagecolor') : 'color';
+$background_color = get_sub_field('background_color') ? get_sub_field('background_color') : '#1e1e1e';
 $tesimonials_post_obj = get_sub_field('tesimonials_post_obj');
 $general_class = '';
 $background_tag = '';
@@ -15,16 +17,22 @@ if( in_array('Add Common Margin', $general_settings) ){
 	$general_class .= ' comman-margin';
 }
 
-if( !empty($background_image) ){
-
+if($background_imagecolor == 'image' && !empty($background_image)){
 	$background_tag = ' style="background-image:url('. $background_image .')"';
 }
+else{
+	$background_tag = ' style="background-color:'. $background_color .'"';
+}
+
+
 
 $testimonial_section_bg_title = get_sub_field('testimonial_section_bg_title');
 $testimonial_section_small_title = get_sub_field('testimonial_section_small_title');
 $testimonial_section_title = get_sub_field('testimonial_section_title');
 $testimonial_section_content = get_sub_field('testimonial_section_content');
 $testimonial_section_button = get_sub_field('testimonial_section_button');
+
+// print_r($tesimonials_post_obj);
 
 if ( !empty($tesimonials_post_obj) ) { ?>
 
@@ -58,14 +66,15 @@ if ( !empty($tesimonials_post_obj) ) { ?>
 			<div class="row g-md-5">
 				<?php foreach( $tesimonials_post_obj as $tesimonial ){
 
-			        $reviewer_image = get_field('reviewer_image', $tesimonial);
-					$reviewer_name = get_field('reviewer_name', $tesimonial);
-					$reviewer_designation = get_field('reviewer_designation', $tesimonial);
-					$review_content = get_field('review_content', $tesimonial);
-					$rating_count = get_field('rating_count', $tesimonial); ?>
+			        $reviewer_image = get_field('reviewer_image', $tesimonial->ID);
+					$reviewer_name = get_field('reviewer_name', $tesimonial->ID);
+					$reviewer_name = $reviewer_name ? $reviewer_name : $tesimonial->post_title;
+					$reviewer_designation = get_field('reviewer_designation', $tesimonial->ID);
+					$review_content = get_field('review_content', $tesimonial->ID);
+					$rating_count = get_field('rating_count', $tesimonial->ID); ?>
 			        
 			        <div class="col-md-6 col-lg-4 our-word">
-						<a href="<?php echo get_permalink($tesimonial);?>" class="card-wrap text-decoration-none d-block">
+						<a href="<?php echo get_permalink($tesimonial->ID);?>" class="card-wrap text-decoration-none d-block">
 							<?php if( !empty($rating_count) ){ ?>
 
 								<div class="star-wrap">
@@ -80,11 +89,16 @@ if ( !empty($tesimonials_post_obj) ) { ?>
 
 							<div class="client-details">
 								<?php if( !empty($reviewer_image) ){ ?>
-
 									<div class="icon-wrap">
 										<img src="<?php echo $reviewer_image; ?>" alt="<?php echo $reviewer_name; ?>">
 									</div>
-								<?php } ?>
+								<?php } 
+								else{
+									echo '<div class="icon-wrap">';
+									echo get_the_post_thumbnail($tesimonial->ID, 'thumbnail');
+									echo '</div>';
+								}
+								?>
 
 								<div class="client-content">
 									<?php if( !empty($reviewer_name) ){ ?>
