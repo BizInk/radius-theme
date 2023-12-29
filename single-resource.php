@@ -19,7 +19,6 @@ $resource_second_button = get_field('resource_second_button');
     <div class="container">
 
         <?php if( !empty($resource_video_url) && !empty($resource_video_thumbnail['url']) ){ ?>
-
             <div class="resource-video">
                 <a href="<?php echo $resource_video_url; ?>" target="" data-fancybox="">
                     <img src="<?php echo $resource_video_thumbnail['url']; ?>" title="<?php echo $resource_video_thumbnail['title']; ?>" class="img-fluid" alt="<?php echo $resource_video_thumbnail['alt']; ?>">
@@ -43,6 +42,7 @@ $resource_second_button = get_field('resource_second_button');
             </div>
         <?php } ?>
 
+        <?php if( !empty($resource_left_column_content) && !empty($resource_right_column_content) ):  ?>
         <div class="resource-content comman-margin">        
             <div class="row">
                 <?php if( !empty($resource_left_column_content) ){ ?>
@@ -93,6 +93,10 @@ $resource_second_button = get_field('resource_second_button');
                     </div>
                 </div>
             </div>
+        </div>
+        <?php endif; ?>
+        <div class="resource-content comman-margin">
+            <?php the_content(); ?>
         </div>
     </div>
 </section>

@@ -31,12 +31,15 @@
 }else if( is_home() ){
 
     $inner_banner_bg_image = get_field('inner_banner_bg_image', 'option');
-    $inner_banner_title = 'Blogs'; 
+    $inner_banner_title = __('Blogs','radius-theme'); 
     $inner_banner_content = get_field('inner_banner_content', 'option');
 }else if( is_archive() ){
 
     $inner_banner_bg_image = get_field('inner_banner_bg_image', 'option');
-    $inner_banner_title = single_cat_title( '', false ); 
+    $inner_banner_title = single_cat_title( '', false );
+    if(empty($inner_banner_title) && is_post_type_archive()){
+        $inner_banner_title = post_type_archive_title( '', false );
+    } 
     $inner_banner_content = '';
 }else if( is_404() ){
 
@@ -71,10 +74,10 @@ if( !is_search() ){
                         <h1><?php echo do_shortcode($inner_banner_title); ?></h1>
                     <?php }
 
-                    if( !empty($inner_banner_content) ) {
+                    if( !empty($inner_banner_content) && !is_singular('resource') ) { ?>
 
-                        echo $inner_banner_content;
-                    } ?>
+                        <p><?php echo $inner_banner_content; ?></p>
+                    <?php } ?>
                 </div>
             </div>
         </div>      

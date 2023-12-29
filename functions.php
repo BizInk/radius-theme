@@ -317,22 +317,33 @@ function luca_breadcrumb(){
 
         // If the current page is a single post, show its title with the separator
         if( is_singular('team-member') ){
-
-            echo '<li class="breadcrumb-item">The Directors</a></li>';
+            echo '<li class="breadcrumb-item">Team Members</a></li>';
+			echo '<li class="breadcrumb-item active" aria-current="page">'. get_the_title() .'</a></li>';
         }
+		else if( is_singular('weekly-digest') ){
+            echo '<li class="breadcrumb-item">Weekly Digests</a></li>';
+			echo '<li class="breadcrumb-item active" aria-current="page">'. get_the_title() .'</a></li>';
+        }
+
+		if( is_post_type_archive('weekly-digest') ){
+			echo '<li class="breadcrumb-item">Weekly Digests</a></li>';
+		}
+		else if( is_post_type_archive('team-member') ){
+			echo '<li class="breadcrumb-item">Team Members</a></li>';
+		}
+		else if( is_post_type_archive('post') ){
+			echo '<li class="breadcrumb-item">Blog</a></li>';
+		}
 
         if( is_singular('post') ){
 
             echo '<li class="breadcrumb-item active" aria-current="page">'. get_the_title() .'</a></li>';
         }
-
-        if( is_singular('testimonial') ){
+        else if( is_singular('testimonial') ){
 
             echo '<li class="breadcrumb-item active" aria-current="page">Testimonials</li>';
         }
-
-        if( is_singular('resource') ){
-
+        else if( is_singular('resource') ){
             echo '<li class="breadcrumb-item active" aria-current="page">'. get_the_title() .'</li>';
         }
 
@@ -466,7 +477,6 @@ function fetch_blog_posts() {
 	}
 
 	wp_reset_query();
-
 	echo json_encode($return_content);
 
 die();
