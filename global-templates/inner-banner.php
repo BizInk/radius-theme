@@ -66,16 +66,11 @@ if( !is_search() ){
         <div class="full-width-wysiwyg text-left">
             <div class="container">
                 <?php luca_breadcrumb(); ?>
-                
                 <div class="editor-design">
-
                     <?php if( !empty($inner_banner_title) ) { ?>
-
                         <h1><?php echo do_shortcode($inner_banner_title); ?></h1>
                     <?php }
-
-                    if( !empty($inner_banner_content) && !is_singular('resource') ) { ?>
-
+                    if( !empty($inner_banner_content) && !is_singular('resource') && !is_singular('weekly-digest') ) { ?>
                         <p><?php echo $inner_banner_content; ?></p>
                     <?php } ?>
                 </div>

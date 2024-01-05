@@ -4,7 +4,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-get_template_part('global-templates/inner-banner');
+// get_template_part('global-templates/inner-banner');
 
 $price_full_description = get_field('price_full_description');
 $price = get_field('price');

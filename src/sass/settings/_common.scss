@@ -13,11 +13,13 @@
   color:$white;
 }
 
-li.breadcrumb-item{ 
-   &.active  {
+li.breadcrumb-item{
+  color:$white;
+
+  &.active  {
       color:$red;      
-   }
-   a {
+  }
+  a{
     color:$white;    
   }
 }
