@@ -3,7 +3,7 @@ Contributors: Bizink,Jayden Major
 Tags: Bizink, Radius
 Requires at least: 5.6
 Tested up to: 6.4.2
-Stable tag: 1.3.4
+Stable tag: 1.3.6
 Requires PHP: 7.4
 
 The Radius theme
@@ -13,10 +13,17 @@ The Radius theme
 
 == Changelog ==
 
-= 1.3.4 =
+= 1.3.6 =
 * Pagages Updates
 * Resources Update
 * Testimonial Update
+
+= 1.3.5 =
+* Weekly Digest Induvial Page
+* Banner Breadcrumb color
+
+= 1.3.4 =
+* Weekly Digests Fix
 
 = 1.3.3 =
 * Revert Scss
