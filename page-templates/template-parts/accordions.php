@@ -16,12 +16,12 @@ $accordions_title = get_sub_field('accordions_title');
 
 if( have_rows('accordions_accordion_items') ){
 ?>
-  <section class="accordion-section text-center<?= $general_class; ?>">
+  <section class="accordion-section text-center<?php echo $general_class; ?>">
     <div class="container">
       
       <?php if( !empty($accordions_title) ){ ?>
         
-        <h2><?= $accordions_title; ?></h2>
+        <h2><?php echo $accordions_title; ?></h2>
       <?php } ?>
 
       <div class="accordion" id="accordionItems">
@@ -37,14 +37,14 @@ if( have_rows('accordions_accordion_items') ){
             ?>
 
             <div class="accordion-item">
-              <h2 class="accordion-header" id="heading<?= $counter; ?>">
-                <button class="accordion-button<?= $counter == 1 ? null : ' collapsed'; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $counter; ?>" aria-expanded="<?= $counter == 1 ? 'true' : 'false'; ?>" aria-controls="collapse<?= $counter; ?>">
-                  <?= $accordions_item_title; ?>
+              <h2 class="accordion-header" id="heading<?php echo $counter; ?>">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $counter; ?>" aria-expanded="false" aria-controls="collapse<?php echo $counter; ?>">
+                  <?php echo $accordions_item_title; ?>
                 </button>
               </h2>
-              <div id="collapse<?= $counter; ?>" class="accordion-collapse collapse<?= $counter == 1 ? ' show' : null; ?>" aria-labelledby="heading<?= $counter; ?>" data-bs-parent="#accordionItems">
+              <div id="collapse<?php echo $counter; ?>" class="accordion-collapse collapse" aria-labelledby="heading<?php echo $counter; ?>" data-bs-parent="#accordionItems">
                 <div class="accordion-body">
-                  <?= $accordions_item_content; ?>
+                  <?php echo $accordions_item_content; ?>
                 </div>
               </div>
             </div>

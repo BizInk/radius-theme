@@ -17168,6 +17168,14 @@ a:focus {
   outline: none;
 }
 
+section h2, section .h2 {
+  position: relative;
+}
+
+.wrapper.comman-margin {
+  margin: 50px 0;
+}
+
 .breadcrumb-item + .breadcrumb-item::before {
   content: "|";
   color: #fff;
@@ -18146,6 +18154,20 @@ footer .disclamer-wrap {
 }
 .page-not-found .btn-sm, .page-not-found .btn-group-sm > .btn, .page-not-found .woocommerce-notices-wrapper .woocommerce-message .btn-group-sm > a.button, .woocommerce-notices-wrapper .woocommerce-message .page-not-found .btn-group-sm > a.button, .page-not-found .woocommerce-info .btn-group-sm > a.button, .woocommerce-info .page-not-found .btn-group-sm > a.button, .page-not-found .wpcf7 .btn-group-sm > input[type=submit], .wpcf7 .page-not-found .btn-group-sm > input[type=submit] {
   padding: 12px 33px;
+}
+
+.wrapper.blog-wraper.comman-margin {
+  margin: 100px 0;
+}
+@media (max-width: 991.98px) {
+  .wrapper.blog-wraper.comman-margin {
+    margin: 70px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .wrapper.blog-wraper.comman-margin {
+    margin: 40px 0;
+  }
 }
 
 .single .blog-wraper .row > div > main#main, .category .blog-wraper .row > div > main#main {
@@ -19180,7 +19202,7 @@ body .gform_confirmation_message {
   font-weight: 800;
   line-height: 1;
   -webkit-text-stroke-width: 1px;
-  opacity: 0.1;
+  opacity: 0.21;
   margin-bottom: -8rem;
 }
 @media (max-width: 1199.98px) {
@@ -19277,19 +19299,6 @@ body .gform_confirmation_message {
 .infobox-section.resource-infobox {
   margin: 0;
 }
-.infobox-section.resource-infobox .infobox-warp {
-  padding: 10rem 0;
-}
-@media (max-width: 991.98px) {
-  .infobox-section.resource-infobox .infobox-warp {
-    padding: 7rem 0;
-  }
-}
-@media (max-width: 767.98px) {
-  .infobox-section.resource-infobox .infobox-warp {
-    padding: 4rem 0;
-  }
-}
 .infobox-section.resource-infobox .infobox-warp .info-box {
   padding: 4rem;
   border-radius: 0;
@@ -19305,6 +19314,9 @@ body .gform_confirmation_message {
 }
 .infobox-section.resource-infobox .infobox-warp .info-box:hover img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(236deg) brightness(104%) contrast(101%);
+}
+.infobox-section.resource-infobox .infobox-warp .info-box h4, .infobox-section.resource-infobox .infobox-warp .info-box .h4 {
+  margin: 3rem 0;
 }
 .infobox-section.resource-infobox .infobox-warp .info-box h5, .infobox-section.resource-infobox .infobox-warp .info-box .h5 {
   font-size: 3rem;
@@ -19855,6 +19867,19 @@ body .gform_confirmation_message {
     font-size: 2rem;
   }
 }
+.pricing-section .form-check.form-switch {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 30px;
+  padding: 0;
+}
+.pricing-section .form-check.form-switch .form-check-input {
+  width: 3em;
+  height: 23px;
+  float: unset;
+  margin: 0 20px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
+}
 .pricing-section .card {
   border: 0;
   border-radius: 10px;
@@ -19909,6 +19934,15 @@ body .gform_confirmation_message {
     font-size: 2.2rem;
   }
 }
+.pricing-section .card .card-header .yearly-price {
+  display: none;
+}
+.pricing-section .card .card-header .show .yearly-price {
+  display: inline-block;
+}
+.pricing-section .card .card-header .show .monthly-price {
+  display: none;
+}
 .pricing-section .card .card-body {
   margin: 0 40px 30px;
   padding-top: 1rem;
@@ -19927,6 +19961,9 @@ body .gform_confirmation_message {
   margin-bottom: 15px;
   display: flex;
   align-items: flex-start;
+}
+.pricing-section .card .card-body ul li i {
+  margin-top: 1rem;
 }
 .pricing-section .card .card-body ul li img {
   margin-top: 1rem;
@@ -20716,9 +20753,9 @@ body .gform_confirmation_message {
   }
 }
 .testimonial-list .our-word .card-wrap .client-details .icon-wrap {
-  width: 104px;
-  height: 104px;
-  min-width: 104px;
+  width: 75px;
+  height: 75px;
+  min-width: 75px;
   margin-right: 20px;
   border-radius: 100%;
   overflow: hidden;
@@ -21025,7 +21062,7 @@ body .gform_confirmation_message {
   font-weight: 800;
   line-height: 1;
   -webkit-text-stroke-width: 1px;
-  opacity: 0.1;
+  opacity: 0.21;
   margin-bottom: -8rem;
 }
 @media (max-width: 1199.98px) {

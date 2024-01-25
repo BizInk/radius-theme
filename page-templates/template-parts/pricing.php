@@ -19,12 +19,9 @@ $pricing_description = get_sub_field('pricing_description');
 $columns_number = get_sub_field('columns_number');
 $columns_classes = 'col-md-6 col-lg-4';
 if( $columns_number == 4 ){
-$columns_classes = 'col-md-6 col-lg-3';
+    $columns_classes = 'col-md-6 col-lg-3';
 }
 ?>
-
-<?php get_template_part('global-templates/inner-banner'); ?>
-
 
 <section class="pricing-section<?php echo $general_class; ?>">
     <div class="full-width-wysiwyg text-center">
@@ -43,6 +40,11 @@ $columns_classes = 'col-md-6 col-lg-3';
         </div>
     </div>
     <div class="container">
+        <div class="form-check form-switch">
+          <label class="form-check-label" for="flexSwitchCheckDefault"><?php _e('Monthly Price','radius-theme'); ?></label>
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault"><?php _e('Yearly Price','radius-theme'); ?></label>
+        </div>
         <div class="row gy-5 g-md-5 <?php echo $columns_number == 5 ? 'row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5' : null; ?>">
                 <?php
                 if( $choose_pricing_packeges ){
@@ -56,10 +58,10 @@ $columns_classes = 'col-md-6 col-lg-3';
                         $price_from = get_field('price_from');
                         $gstvat = get_field('gstvat');
                         $price_button = get_field('price_button');
-                        $price = get_field('price');
+                        $monthly_price = get_field('monthly_price');
+                        $yearly_price = get_field('yearly_price');
                         $price_features_alignment = get_field( 'price_features_alignment' );
                         $show_decimals = get_field( 'show_decimals' );
-                        $show_price_per_period = get_field( 'show_price_per_period' ); 
                         
                         $use_custom_colours = get_field('use_custom_colours');
                         $title_color = get_field('title_color');
@@ -163,40 +165,23 @@ $columns_classes = 'col-md-6 col-lg-3';
                                         <?php if(get_field('price_description')): ?>
                                             <p><?php echo get_field('price_description'); ?></p>
                                         <?php endif;
-                                        if( $price ) {
+                                        if( $monthly_price || $yearly_price ) {
                                             echo $price_from ? '<span class="pricefrom">From: </span>' : null; 
-                                            $decimals = floatval($price) - floor(floatval($price));
+                                            $decimals_monthly = floatval($monthly_price) - floor(floatval($monthly_price));
+                                            $decimals_yearly = floatval($yearly_price) - floor(floatval($yearly_price));
                                             $currency_symbol = get_field('currency_symbol');
                                             $currency_symbol = $currency_symbol ? $currency_symbol : '$';
                                             ?>
                                             <h2 class="mb-1 pb-0 card-title pricing-card-title<?php echo $show_decimals ? ' show-decimals' : null; ?>">
                                                 <span class="currency_symbol"><?php echo get_field('currency_symbol') ? get_field('currency_symbol'):"$"; ?></span>
-                                                <span class="price"><?php if($show_decimals): echo str_replace(" ","",floor(floatval($price))); else: echo $price; endif; ?></span>
+                                                <span class="monthly-price"><?php if($show_decimals): echo str_replace(" ","",floor(floatval($monthly_price))); else: echo $monthly_price; endif; ?></span>
+                                                <span class="yearly-price"><?php if($show_decimals): echo str_replace(" ","",floor(floatval($yearly_price))); else: echo $yearly_price; endif; ?></span>
 
                                             <?php if( $show_decimals ){ ?>
-                                                <sub style="bottom:0;left:-10px;font-size:.6em;" class="decimals">.<?php echo $decimals == 0 ? "00":($decimals*100); ?></sub>
+                                                <sub style="bottom:0;left:-10px;font-size:.6em;" class="decimals-monthly">.<?php echo $decimals_monthly == 0 ? "00":($decimals_monthly*100); ?></sub>
+                                                <sub style="bottom:0;left:-10px;font-size:.6em;" class="decimals-yearly">.<?php echo $decimals_yearly == 0 ? "00":($decimals_yearly*100); ?></sub>
                                             <?php }
-                                            if($show_price_per_period != 'none'):
-                                            ?>
-                                                <small style="left:-10px;" class="priceper">/ <?php
-                                                switch($show_price_per_period){
-                                                    case 'day':
-                                                        _e('day','wave');
-                                                        break;
-                                                    case 'week':
-                                                        _e('week','wave');
-                                                        break;
-                                                    case 'year':
-                                                        _e('year','wave');
-                                                        break;
-                                                    case 'month':
-                                                    default:
-                                                        _e('month','wave');
-                                                        break;
-                                                }
-                                                ?></small>
-                                            <?php
-                                            endif;
+
                                             if(empty($gstvat) || $gstvat != 'no'){
                                                 echo '<small style="left:-10px;" class="gstvat"> +';
                                                 switch($gstvat){
@@ -227,7 +212,7 @@ $columns_classes = 'col-md-6 col-lg-3';
                                                     $features = get_sub_field('features');
                                                     if( !empty($features) ) { ?>
                                                         <li>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path class="check" id="Path_6077" data-name="Path 6077" d="M20,10A10,10,0,1,1,10,0,10,10,0,0,1,20,10ZM15.037,6.213a.938.938,0,0,0-1.35.027L9.346,11.771,6.73,9.154a.938.938,0,0,0-1.325,1.325l3.307,3.308a.938.938,0,0,0,1.349-.025l4.99-6.238a.938.938,0,0,0-.012-1.313Z" fill="#427cd4" fill-rule="evenodd"/></svg>
+                                                           <i class="fa fa-check-circle" aria-hidden="true"></i>
                                                             <span><?php echo $features; ?></span>
                                                         </li>
                                                     <?php }

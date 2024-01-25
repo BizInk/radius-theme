@@ -67,6 +67,7 @@
             "max": 0,
             "layout": "table",
             "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_62d923ce8889d",
@@ -89,13 +90,32 @@
                     "maxlength": "",
                     "parent_repeater": "field_62d923ac8889c"
                 }
-            ],
-            "rows_per_page": 20
+            ]
         },
         {
             "key": "field_62d923dd8889e",
-            "label": "Price",
-            "name": "price",
+            "label": "Monthly Price",
+            "name": "monthly_price",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the price of your package. Currency symbol added automatically.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_659ba4537d44b",
+            "label": "Yearly Price",
+            "name": "yearly_price",
             "aria-label": "",
             "type": "text",
             "instructions": "Enter the price of your package. Currency symbol added automatically.",
@@ -160,13 +180,13 @@
             "type": "true_false",
             "instructions": "If Enabled this will make the decimals smaller in the price",
             "required": 0,
-            "message": "Show Small Decimals",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "25",
                 "class": "",
                 "id": ""
             },
+            "message": "Show Small Decimals",
             "default_value": 0,
             "ui": 1,
             "ui_on_text": "Yes",
@@ -201,41 +221,12 @@
             "placeholder": ""
         },
         {
-            "key": "field_62d92421888a1",
-            "label": "Price Per Period",
-            "name": "show_price_per_period",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "Shows /day, /week, /month, /year after the price. If you select 'None - Non-Recuring Price' then the price will not show a period after it.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "none": "None - Non-Recuring Price", 
-                "day": "Day",
-                "week": "Week",
-                "month": "Month",
-                "year": "Year"
-            },
-            "default_value": "none",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_62d922c488899",
             "label": "Most popular",
             "name": "most_popular_item",
             "aria-label": "",
             "type": "true_false",
-            "instructions": "Show Most Popular / Featured Text above this package. (Text can be customised)",
+            "instructions": "Show Most Popular \/ Featured Text above this package. (Text can be customised)",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -255,7 +246,7 @@
             "name": "most_popular_item_text",
             "aria-label": "",
             "type": "text",
-            "instructions": "Enter the text you wish to display for the Most Popular / Featured item. Default to 'Most Popular'",
+            "instructions": "Enter the text you wish to display for the Most Popular \/ Featured item. Default to 'Most Popular'",
             "required": 0,
             "conditional_logic": [
                 [
@@ -271,7 +262,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Most Popular"
+            "default_value": "Most Popular",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_65573390ad2af",
@@ -774,5 +769,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1700215527
+    "modified": 1704698993
 }

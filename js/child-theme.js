@@ -1,6 +1,6 @@
 /*!
   * Understrap v1.1.0 (https://understrap.com)
-  * Copyright 2013-2023 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+  * Copyright 2013-2024 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
   * Licensed under GPL (http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
   */
 (function (global, factory) {
@@ -11648,6 +11648,13 @@
 	  jQuery(".filter-wrap ul li").on("click", function () {
 	    jQuery(this).parents("ul").slideUp(200);
 	    jQuery(this).parents(".filter-wrap").find(".dropdown").text($(this).text());
+	  });
+	  jQuery('.form-switch input:checkbox').change(function () {
+	    if (jQuery(this).is(":checked")) {
+	      jQuery('.pricing-card-title').addClass("show");
+	    } else {
+	      jQuery('.pricing-card-title').removeClass("show");
+	    }
 	  }); // logo-slider-start
 
 	  if (jQuery(document).find('.logo-slider').length > 0) {

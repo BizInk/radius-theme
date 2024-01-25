@@ -859,7 +859,8 @@
                                         "4": "Lead Magnet",
                                         "3": "Newsletter Form",
                                         "1": "Request a Quote",
-                                        "2": "Sign up"
+                                        "2": "Sign up",
+                                        "7": "Test"
                                     },
                                     "default_value": false,
                                     "return_format": "value",
@@ -1794,6 +1795,24 @@
                             "custom_choice_button_text": "Add new choice"
                         },
                         {
+                            "key": "field_65ade84474529",
+                            "label": "Text Color",
+                            "name": "testimonial_text_color",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#FFFFFF",
+                            "enable_opacity": 0,
+                            "return_format": "string"
+                        },
+                        {
                             "key": "field_64e43b53bb76d",
                             "label": "Background Options",
                             "name": "",
@@ -1811,31 +1830,6 @@
                             "endpoint": 0
                         },
                         {
-                            "key":"field_6583acd763208",
-                            "label": "Background Image \/ Color",
-                            "name": "background_imagecolor",
-                            "aria-label": "",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "image": "Image",
-                                "color": "Color"
-                            },
-                            "default_value": "image",
-                            "return_format": "value",
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "layout": "vertical",
-                            "save_other_choice": 0
-                        },
-                        {
                             "key": "field_64e43b62bb76e",
                             "label": "Background Image",
                             "name": "background_image",
@@ -1843,15 +1837,7 @@
                             "type": "image",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_6583acd763208",
-                                        "operator": "==",
-                                        "value": "image"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1867,32 +1853,6 @@
                             "max_size": "",
                             "mime_types": "",
                             "preview_size": "medium"
-                        },
-                        {
-                            "key": "field_6583ad776320a",
-                            "label": "Background Color",
-                            "name": "background_color",
-                            "aria-label": "",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_6583acd763208",
-                                        "operator": "==",
-                                        "value": "color"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "#333333",
-                            "enable_opacity": 0,
-                            "return_format": "string"
                         },
                         {
                             "key": "field_62e7dfa578c7e",
@@ -1921,7 +1881,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -1941,7 +1901,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -2806,103 +2766,6 @@
                     ],
                     "min": "",
                     "max": ""
-                },
-                "layout_63d8ef81392dc": {
-                    "key": "layout_63d8ef81392dc",
-                    "name": "newsletter",
-                    "label": "Newsletter",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_63d8efd8392de",
-                            "label": "Background Color",
-                            "name": "newsletter_background_color",
-                            "aria-label": "",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "#f9f9f9",
-                            "enable_opacity": 0,
-                            "return_format": "string"
-                        },
-                        {
-                            "key": "field_63d8eff7392df",
-                            "label": "Title",
-                            "name": "newsletter_title",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_63d8effe392e0",
-                            "label": "Content",
-                            "name": "newsletter_content",
-                            "aria-label": "",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
-                        },
-                        {
-                            "key": "field_63d8f007392e1",
-                            "label": "Newsletter Form",
-                            "name": "gravity_forms",
-                            "aria-label": "",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "5": "Get in Touch Member",
-                                "4": "Lead Magnet",
-                                "3": "Newsletter Form",
-                                "1": "Request a Quote",
-                                "2": "Sign up"
-                            },
-                            "default_value": false,
-                            "return_format": "value",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
                 }
             },
             "min": "",
@@ -2935,5 +2798,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701665839
+    "modified": 1705896060
 }

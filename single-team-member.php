@@ -33,17 +33,17 @@ $member_instagram = get_field('member_instagram');
                             <ul>
                                 <?php if( !empty($member_phone) ){ ?>
 
-                                    <li><a href="tel:<?php echo $member_phone; ?>">Tel: <?php echo $member_phone; ?> <i class="fa fa-phone" aria-hidden="true"></i></a></li>
+                                    <li><a href="tel:<?php echo $member_phone; ?>"><?php _e('Tel:','radius-theme'); echo $member_phone; ?> <i class="fa fa-phone" aria-hidden="true"></i></a></li>
                                 <?php }
 
                                 if( !empty($member_email) ){ ?>
 
-                                    <li><a href="mailto:<?php echo $member_email; ?>">Email: <?php echo $member_email; ?><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                    <li><a href="mailto:<?php echo $member_email; ?>"><?php _e('Email:','radius-theme'); echo $member_email; ?><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                                 <?php }
 
                                 if( !empty($member_address) ){ ?>
 
-                                    <li><a href="https://maps.google.com/q=<?php echo urlencode($member_address); ?>" target="_blank">Address: <?php echo $member_address; ?> <i class="fa fa-map" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://maps.google.com/q=<?php echo urlencode($member_address); ?>" target="_blank"><?php _e('Address:','radius-theme'); echo $member_address; ?> <i class="fa fa-map" aria-hidden="true"></i></a></li>
                                 <?php } ?>
                             </ul>
                         </div>
@@ -66,7 +66,7 @@ $member_instagram = get_field('member_instagram');
                     <?php if( !empty($member_facebook) || !empty($member_twitter) || !empty($member_instagram) || !empty($member_linkedin) ){ ?>
 
                         <div class="social-wrap">
-                          <h5>Follow me:</h5>
+                          <h5><?php _e('Follow me:','radius-theme'); ?></h5>
                           <ul class="social-nav">
                                 
                                 <?php if( !empty($member_facebook) ){ ?>
@@ -76,7 +76,7 @@ $member_instagram = get_field('member_instagram');
                                 
                                 if( !empty($member_twitter) ){ ?>
 
-                                    <li><a href="<?php echo $member_twitter; ?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="<?php echo $member_twitter; ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                 <?php }
 
                                 if( !empty($member_linkedin) ){ ?>
@@ -95,7 +95,7 @@ $member_instagram = get_field('member_instagram');
                     if( !empty($member_skillset) ){ ?>
 
                         <div class="skillset">
-                             <h5>Skillset</h5>
+                             <h5><?php _e('Skillset','radius-theme'); ?></h5>
                              <div class="editor-design">
                                 <?php echo $member_skillset; ?>
                              </div>

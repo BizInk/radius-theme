@@ -38,6 +38,9 @@
     h5{
       color:$red;
     }
+    h4{
+      color:$primary;
+    } 
     &:hover{
       background-color:$red;
       img{
@@ -54,6 +57,32 @@
     }    
   }   
 }
+
+.infobox-section.resource-infobox.checklist-infobox{
+  .info-box {
+    a {
+      background-color:$orange;
+      color:$white;
+      border-color:$orange;
+    }
+  }
+}
+
+.infobox-section.checklist-infobox.content-type-section{
+  .info-box {
+    a.btn {
+      background-color:$primary;
+      color:$white;
+      border-color:$primary; 
+      &:hover{
+        background-color:$dark;
+        color:$white;
+        border-color:$dark;
+      }
+    }
+  }
+}
+
 
 .infobox-section.content-topic-section{
   .info-box{
@@ -105,4 +134,9 @@
 }
 .accordion .accordion-item .accordion-body {
     background-color:rgba($dark, 0.08);
+}
+.infobox-section.checklist-infobox.content-topic-section{
+  .info-box p{
+    color:$primary;
+  }
 }

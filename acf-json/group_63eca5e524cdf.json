@@ -1,13 +1,13 @@
 {
     "key": "group_63eca5e524cdf",
-    "title": "Select Resources",
+    "title": "Resources Page Content",
     "fields": [
         {
-            "key": "field_64ed77e857396",
-            "label": "Resources",
-            "name": "resources",
+            "key": "field_63eca6650f9cf",
+            "label": "Content Topics Small Title",
+            "name": "content_topics_small_title",
             "aria-label": "",
-            "type": "post_object",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,19 +16,111 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "resource"
-            ],
-            "post_status": [
-                "publish"
-            ],
-            "taxonomy": "",
-            "return_format": "object",
-            "multiple": 1,
-            "allow_null": 0,
-            "bidirectional": 0,
-            "ui": 1,
-            "bidirectional_target": []
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63eca5e60f9cb",
+            "label": "Content Topics Title",
+            "name": "content_topics_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63eca6070f9cc",
+            "label": "Content Topics Content",
+            "name": "content_topics_content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_63eca6760f9d0",
+            "label": "Content Types Small Title",
+            "name": "content_types_small_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63eca63a0f9cd",
+            "label": "Content Types Title",
+            "name": "content_types_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63eca6460f9ce",
+            "label": "Content Types Content",
+            "name": "content_types_content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -49,5 +141,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693284376
+    "modified": 1702959027
 }

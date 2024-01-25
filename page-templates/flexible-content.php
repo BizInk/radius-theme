@@ -56,7 +56,7 @@ file_put_contents($output_file, $compiled_css);
 
 get_header();
 
-if( is_page(array( 'contact-us', 'testimonial-list', 'packages')) ){
+if( !is_front_page() ){
 
   get_template_part('global-templates/inner-banner');
 }
