@@ -11,27 +11,13 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="entry-header">
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-
-			<?php understrap_posted_on(); ?>
-
-		</div><!-- .entry-meta -->
-
-    </div><!-- .entry-header -->
-
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php if(get_post_type() != "weekly-digest"): echo get_the_post_thumbnail( $post->ID, 'large' ); endif; ?>
 
 	<div class="entry-content default-content">
-
 		<?php
 		the_content();
 		understrap_link_pages();
 		?>
-
 	</div><!-- .entry-content --> 
 
 </article><!-- #post-## -->

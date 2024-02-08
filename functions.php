@@ -322,7 +322,7 @@ function luca_breadcrumb(){
         }
 		else if( is_singular('weekly-digest') ){
             echo '<li class="breadcrumb-item">Weekly Digests</a></li>';
-			echo '<li class="breadcrumb-item active" aria-current="page">'. get_the_title() .'</a></li>';
+			// echo '<li class="breadcrumb-item active" aria-current="page">'. get_the_title() .'</a></li>';
         }
 
 		if( is_post_type_archive('weekly-digest') ){
@@ -334,12 +334,13 @@ function luca_breadcrumb(){
 		else if( is_post_type_archive('post') ){
 			echo '<li class="breadcrumb-item">Blog</a></li>';
 		}
-
+		/*
         if( is_singular('post') ){
-
             echo '<li class="breadcrumb-item active" aria-current="page">'. get_the_title() .'</a></li>';
         }
-        else if( is_singular('testimonial') ){
+        else
+		*/
+		if( is_singular('testimonial') ){
 
             echo '<li class="breadcrumb-item active" aria-current="page">Testimonials</li>';
         }
@@ -383,8 +384,7 @@ function luca_breadcrumb(){
             echo '<li class="breadcrumb-item active" aria-current="page">Search</li>';
         }
 
-        echo '</ol>
-            </nav>';
+        echo '</ol></nav>';
     }
 }
 

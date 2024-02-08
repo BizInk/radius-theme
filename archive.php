@@ -21,7 +21,6 @@ $posts_args = array(
     'order'  => 'ASC', 
 	'cat' => get_queried_object()->term_id,
 );
-
 $posts_loop = new WP_Query( $posts_args );
 
 if( $posts_loop->have_posts() ){ ?>

@@ -19,23 +19,19 @@ get_template_part('global-templates/inner-banner');
 	<div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 
 		<div class="row justify-content-between">
-			<div class="col-md-12 col-lg-8">
-
+			<div class="col-8">
 				<main class="site-main" id="main">
-
 					<?php
 					while (have_posts()) {
 						the_post();
 						get_template_part('loop-templates/content', 'single'); 
 
 					}
-					get_template_part('global-templates/right-sidebar-check');
 					?>
-
 				</main><!-- #main -->
-
-				<!-- Do the right sidebar check -->
 			</div>
+
+			<?php get_template_part('global-templates/right-sidebar-check'); ?>
 		</div><!-- .row -->		
 		
 	</div><!-- #content -->

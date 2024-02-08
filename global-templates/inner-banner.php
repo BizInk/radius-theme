@@ -18,16 +18,19 @@
     $inner_banner_bg_image = get_field('inner_banner_bg_image', 'option');
     $inner_banner_title = get_the_title();
     $inner_banner_content = '';
+}else if( is_singular('weekly-digest') ){
+
+    $inner_banner_bg_image = get_field('inner_banner_bg_image', 'option');
+    $inner_banner_title = get_the_title();
+    $inner_banner_content = '';
 }else if( is_single() ){
 
     global $post;
     $author_id = $post->post_author;
-
     $inner_banner_bg_image = get_field('inner_banner_bg_image', 'option');
     $inner_banner_title = get_the_title();
-    $inner_banner_content = '<p class="post-meta">
-            <span>'. get_the_author_meta('display_name', $author_id) .'</span> | <span>'. get_the_date('d M, Y') .'</span>
-        </p>';
+    $inner_banner_content = '<p class="post-meta"><span>'. get_the_date() .'</span></p>';
+    
 }else if( is_home() ){
 
     $inner_banner_bg_image = get_field('inner_banner_bg_image', 'option');

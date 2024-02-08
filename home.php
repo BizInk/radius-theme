@@ -29,8 +29,20 @@ $categories = get_terms([
 		<?php } ?>
 		<div class="team-wrap blog-posts-cont">
 			<?php _e('Loading...','radius-theme');?>
+			<?php
+			/*
+			if ( have_posts() ){ 
+				while ( have_posts() ){ the_post();
+					get_template_part('loop-templates/content'); 
+				}
+			}
+			else{
+				_e('Sorry, there are not posts to display.','radius-theme');
+			}
+			*/
+			?>
 		</div>
-
+				
 		<script>
 			// Script to load more posts
 			jQuery(document).on('click', '.posts-loadmore', function(e){
@@ -50,7 +62,8 @@ $categories = get_terms([
 					jQuery(this).remove();
 				}
 			});
-		</script>  
+		</script>
+		
     </div>
 </section>
 

@@ -5825,6 +5825,9 @@ textarea.form-control-lg {
   color: #6c757d;
   content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
 }
+.breadcrumb-item{
+  color: #fefefe;
+}
 .breadcrumb-item.active {
   color: #6c757d;
 }
@@ -19198,12 +19201,12 @@ body .gform_confirmation_message {
 }
 
 .xl-font {
-  font-size: 134px;
+  font-size: 11rem;
   font-weight: 800;
   line-height: 1;
   -webkit-text-stroke-width: 1px;
-  opacity: 0.21;
-  margin-bottom: -8rem;
+  opacity: 0.4;
+  margin-bottom: -4rem;
 }
 @media (max-width: 1199.98px) {
   .xl-font {

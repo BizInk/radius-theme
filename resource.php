@@ -24,19 +24,21 @@ $content_topics = get_terms(array(
     'taxonomy' => 'content-topic',
     'hide_empty' => false,
 ));
-
+?>
+<section class="infobox-section resource-infobox services-infobox">
+<?php
 if( !empty($content_topics) ){ ?>
 
-    <section class="infobox-section resource-infobox services-infobox">
+    
         <div class="container">
             <div class="infobox-warp">
-                <div class="row g-3">
+                <div class="row g-3 my-4">
                     <?php if( !empty($content_topics_small_title) ){ ?>
-                        <h6><?= $content_topics_small_title; ?></h6>
+                        <h6><?php echo $content_topics_small_title; ?></h6>
                     <?php }
                     
                     if( !empty($content_topics_title) ){ ?>
-                        <h2><?= $content_topics_title; ?></h2>
+                        <h2><?php echo $content_topics_title; ?></h2>
                     <?php }
                     echo $content_topics_content; ?>
                 </div>
@@ -53,19 +55,19 @@ if( !empty($content_topics) ){ ?>
 
                         $icon = get_field('content_topic_icon', $content_topic); ?>
 
-                        <a href="<?= get_term_link($content_topic); ?>" class="col-md-6 col-lg-4 text-decoration-none" <?= $topics_counter > $ppp ? 'style="display:none;"' : ''; ?> data-pagenumber="topics<?= ceil($topics_counter/$ppp); ?>">
+                        <a href="<?php echo get_term_link($content_topic); ?>" class="col-md-6 col-lg-4 text-decoration-none" <?php echo $topics_counter > $ppp ? 'style="display:none;"' : ''; ?> data-pagenumber="topics<?php echo ceil($topics_counter/$ppp); ?>">
                             <div class="info-box text-center h-100">
                                 
                                 <?php if( !empty($icon) ){ ?>
                                     
                                     <img src="<?php echo $icon; ?>" class="img-fluid" alt="">
                                 <?php } ?>
-                                <h4><?= $content_topic->name; ?></h4>
+                                <h4><?php echo $content_topic->name; ?></h4>
 
                                 <?php if( !empty($content_topic->description) ){ ?>
 
                                     <div class="info-description">
-                                        <p><?= do_shortcode($content_topic->description); ?></p>
+                                        <p><?php echo do_shortcode($content_topic->description); ?></p>
                                     </div>
                                 <?php } ?>
                             </div>
@@ -76,7 +78,7 @@ if( !empty($content_topics) ){ ?>
 
                 <?php if( count($content_topics) > $ppp ){ ?>
 
-                    <a href="javascript:void(0);" class="btn red-btn topics-load-more" data-pagenumber="1"><?php _e('Load More','wave-theme'); ?></a>
+                    <a href="javascript:void(0);" class="btn red-btn topics-load-more" data-pagenumber="1"><?php _e('Load More','radius-theme'); ?></a>
                 <?php } ?>
 
                 <script>
@@ -101,7 +103,6 @@ if( !empty($content_topics) ){ ?>
                 </script>
             </div>
         </div>
-    </section>
 <?php }
 
 $content_types = get_terms(array(
@@ -110,27 +111,26 @@ $content_types = get_terms(array(
 ));
 
 if( !empty($content_types) ){ ?>
-
-    <section class="infobox-section resource-infobox services-infobox">        
+     
         <div class="container">
             <div class="infobox-warp">
-                <div class="row g-3">
+                <div class="row g-3 my-4">
                     
                     <?php if( !empty($content_types_small_title) ){ ?>
                         
-                        <h6><?= $content_types_small_title; ?></h6>
+                        <h6><?php echo $content_types_small_title; ?></h6>
                     <?php }
 
                     if( !empty($content_types_title) ){ ?>
                         
-                        <h2><?= $content_types_title; ?></h2>
+                        <h2><?php echo $content_types_title; ?></h2>
                     <?php }
 
                     echo $content_types_content; ?>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container mb-4">
             <div class="infobox-warp">
                 <div class="row gy-5 g-md-5">
 
@@ -138,17 +138,17 @@ if( !empty($content_types) ){ ?>
                     $types_counter = 1;
                     foreach( $content_types as $content_type ){ ?>
 
-                        <div class="col-md-6 col-lg-4" <?= $types_counter > $ppp ? 'style="display:none;"' : ''; ?> data-pagenumber="types<?= ceil($types_counter/$ppp); ?>">
+                        <div class="col-md-6 col-lg-4" <?php echo $types_counter > $ppp ? 'style="display:none;"' : ''; ?> data-pagenumber="types<?php echo ceil($types_counter/$ppp); ?>">
                             <div class="info-box text-center h-100">                        
-                                <h4><?= $content_type->name; ?></h4>
+                                <h4><?php echo $content_type->name; ?></h4>
                                 <div class="info-description">
 
                                     <?php if( !empty($content_type->description) ){ ?>
 
-                                        <p><?= do_shortcode($content_type->description); ?></p>
+                                        <p><?php echo do_shortcode($content_type->description); ?></p>
                                     <?php } ?>
                                 </div>
-                                <a href="<?= get_term_link($content_type); ?>" class="btn"><?php _e('View more','wave-theme');?></a>
+                                <a href="<?php echo get_term_link($content_type); ?>" class="btn"><?php _e('View more','radius-theme');?></a>
                             </div>
                         </div>
                     <?php $types_counter++;
@@ -157,7 +157,7 @@ if( !empty($content_types) ){ ?>
 
                 <?php if( count($content_types) > $ppp ){ ?>
 
-                    <a href="javascript:void(0);" class="btn red-btn types-load-more" data-pagenumber="1"><?php _e('Load More','wave-theme'); ?></a>
+                    <a href="javascript:void(0);" class="btn red-btn types-load-more" data-pagenumber="1"><?php _e('Load More','radius-theme'); ?></a>
                 <?php } ?>
 
                 <script>
@@ -182,8 +182,8 @@ if( !empty($content_types) ){ ?>
                 </script>
             </div>
         </div>
-    </section>
 <?php
 }
-
-get_footer(); ?>
+?>
+</section>
+<?php get_footer(); ?>
