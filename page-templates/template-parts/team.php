@@ -31,7 +31,7 @@ if( !empty($team_members) ){ ?>
 	<section class="p-4 team-section<?php echo $general_class; ?>"<?php echo $background_tag; ?>>
 		<div class="container">		
 			<div class="mb-4 row align-items-center">
-				<div class="col-md-8 col-lg-6">
+				<div class="col-8 col-md-8 col-lg-6">
 					<div class="default-content">
 						<div class="xl-font-wrap">
 							<?php if( !empty($team_bg_title) ){ ?>

@@ -40,7 +40,7 @@ if( have_rows('column_section') ):
 				} ?>
 
 				<div class="row align-item-center <?php echo $column_image_position; ?> flex-column-reverse">
-					<div class="col-md-6 col-left mb-5 mb-md-0">
+					<div class="col-6 col-md-6 col-left mb-5 mb-md-0">
 						<div class="col-content default-content">
 
 							<div class="xl-font-wrap">
@@ -80,28 +80,21 @@ if( have_rows('column_section') ):
 
 						</div>
 					</div>
-					<div class="col-md-6 col-right mb-5 mb-md-0">
-
+					<div class="col-6 col-md-6 col-right mb-5 mb-md-0">
 						<?php if( get_sub_field('column_hero_image') ) { ?>
 							<div class="two-col-img-wrap">				
 								<img src="<?php echo get_sub_field('column_hero_image'); ?>" class="img-fluid" alt="">
-
 								<?php if( !empty($column_trophy_image['url']) || !empty($column_trophy_title) || !empty($column_trophy_subtitle) ){ ?>
-									
 									<div class="two-col-badge">
 										<?php if( !empty($column_trophy_image['url']) ){ ?>
 
 											<img src="<?php echo $column_trophy_image['url']; ?>" alt="<?php echo $column_trophy_image['alt']; ?>" title="<?php echo $column_trophy_image['title']; ?>">
 										<?php } ?>
-
 										<div>
 											<?php if( !empty($column_trophy_title) ){ ?>
-
 												<h3><?= $column_trophy_title; ?></h3>
 											<?php }
-
 											if( !empty($column_trophy_subtitle) ){ ?>
-
 												<p><?= $column_trophy_subtitle; ?></p>
 											<?php } ?>
 										</div>

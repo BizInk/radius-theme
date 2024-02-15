@@ -71,7 +71,7 @@ if ( !empty($tesimonials_post_obj) ) { ?>
 					$review_content = get_field('review_content', $tesimonial);
 					$rating_count = get_field('rating_count', $tesimonial); ?>
 			        
-			        <div class="col-md-6 col-lg-4 our-word">
+			        <div class="col-6 col-md-6 col-lg-4 our-word">
 						<a href="<?php echo get_permalink($tesimonial);?>" class="card-wrap text-decoration-none d-block">
 							<?php if( !empty($rating_count) ){ ?>
 
