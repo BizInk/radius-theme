@@ -13,6 +13,9 @@ The Radius theme
 
 == Changelog ==
 
+= 1.3.9 =
+* Words Outline - Subtitle Fix
+
 = 1.3.8 =
 * Row Fix
 

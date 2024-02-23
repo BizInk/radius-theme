@@ -19205,23 +19205,6 @@ body .gform_confirmation_message {
   line-height: 1;
   -webkit-text-stroke-width: 1px;
   opacity: 0.4;
-  margin-bottom: -4rem;
-}
-@media (max-width: 1199.98px) {
-  .xl-font {
-    font-size: 9.5rem;
-  }
-}
-@media (max-width: 991.98px) {
-  .xl-font {
-    font-size: 6rem;
-    margin-bottom: -5rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .xl-font {
-    font-size: 5rem;
-  }
 }
 
 .infobox-section {
