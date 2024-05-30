@@ -17971,7 +17971,7 @@ header.fixed .btn, header.fixed .woocommerce-notices-wrapper .woocommerce-messag
 @media (max-width: 991.98px) {
   .navbar .navbar-collapse {
     position: fixed;
-    top: 160px;
+    top: 180px;
     right: -100%;
     height: 100vh;
     z-index: 11;
@@ -18035,6 +18035,9 @@ footer .disclamer-wrap {
 @media (max-width: 991.98px) {
   .footer-wrap .footer-logo {
     max-width: 130px;
+  }
+  .footer-wrap .footer-logo img{
+    text-align: center;
   }
 }
 .footer-wrap nav li a {
@@ -19120,6 +19123,17 @@ body .gform_confirmation_message {
 }
 .two-col-section .col-right .two-col-img-wrap {
   position: relative;
+}
+
+.two-col-section .col-right .two-col-img-wrap img,.two-col-section .col-left .two-col-img-wrap img{
+  max-width: 650px;
+  aspect-ratio: 1 / 1;
+}
+@media (max-width: 767.98px) {
+  .two-col-section .col-right .two-col-img-wrap img,.two-col-section .col-left .two-col-img-wrap img{
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+  }
 }
 .two-col-section .default-content h2, .two-col-section .default-content .h2 {
   margin-bottom: 3rem;

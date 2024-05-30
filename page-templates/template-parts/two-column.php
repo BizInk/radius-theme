@@ -27,26 +27,18 @@ if( have_rows('column_section') ):
 		$column_trophy_subtitle = get_sub_field('column_trophy_subtitle');
 		 ?>
 
-		<section class="two-col-section<?= $general_class; ?>"<?= !empty($background_color) ? ' style="background-color:'. $background_color .';"' : null; ?> >
+		<section class="two-col-section<?php echo $general_class; ?>"<?php echo !empty($background_color) ? ' style="background-color:'. $background_color .';"' : null; ?> >
 			<div class="container">  
-				<?php $column_image_position = '';
+				<?php $column_image_position = get_sub_field('column_image_position') ? get_sub_field('column_image_position') : 'right'; ?>
 
-				if( get_sub_field('column_image_position') == 'right' ){
-
-					$column_image_position = 'flex-md-row';
-				} else if( get_sub_field('column_image_position') == 'left' ){
-
-					$column_image_position = 'flex-md-row-reverse';
-				} ?>
-
-				<div class="row align-item-center <?php echo $column_image_position; ?> flex-column-reverse">
-					<div class="col-6 col-md-6 col-left mb-5 mb-md-0">
+				<div class="row align-item-center">
+					<div class="col-12 col-sm-6 col-left mb-5 mb-md-0 <?php if($column_image_position == 'right'): echo 'order-0'; else: echo 'order-1'; endif; ?>">
 						<div class="col-content default-content">
 
 							<div class="xl-font-wrap">
 								<?php if( !empty($column_bg_title) ) { ?>
 
-									<div class="xl-font"><?= $column_bg_title; ?></div>
+									<div class="xl-font"><?php echo $column_bg_title; ?></div>
 								<?php }
 
 								if( get_sub_field('column_small_title') ) { ?>
@@ -75,27 +67,27 @@ if( have_rows('column_section') ):
 
 							if( !empty($column_hero_button['url']) && !empty($column_hero_button['title']) ){ ?>
 
-								<a href="<?= $column_hero_button['url']; ?>" class="btn orange-btn" target="<?= $column_hero_button['target']; ?>"><?= $column_hero_button['title']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+								<a href="<?php echo $column_hero_button['url']; ?>" class="btn orange-btn" target="<?php echo $column_hero_button['target']; ?>"><?php echo $column_hero_button['title']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 							<?php } ?>
 
 						</div>
 					</div>
-					<div class="col-6 col-md-6 col-right mb-5 mb-md-0">
+					<div class="col-12 col-sm-6 col-right mb-5 mb-md-0 <?php if($column_image_position == 'right'):echo 'order-1';else:echo 'order-0';endif;?>">
 						<?php if( get_sub_field('column_hero_image') ) { ?>
 							<div class="two-col-img-wrap">				
-								<img src="<?php echo get_sub_field('column_hero_image'); ?>" class="img-fluid" alt="">
+								<img src="<?php echo get_sub_field('column_hero_image'); ?>" class="img-fluid" alt="<?php echo get_sub_field('column_hero_title') ? do_shortcode(get_sub_field('column_hero_title')) : $column_trophy_title; ?>">
 								<?php if( !empty($column_trophy_image['url']) || !empty($column_trophy_title) || !empty($column_trophy_subtitle) ){ ?>
 									<div class="two-col-badge">
 										<?php if( !empty($column_trophy_image['url']) ){ ?>
 
-											<img src="<?php echo $column_trophy_image['url']; ?>" alt="<?php echo $column_trophy_image['alt']; ?>" title="<?php echo $column_trophy_image['title']; ?>">
+											<img src="<?php echo $column_trophy_image['url']; ?>" alt="<?php echo $column_trophy_image['alt'] ? $column_trophy_image['alt'] : $column_trophy_image['title']; ?>" title="<?php echo $column_trophy_image['title']; ?>">
 										<?php } ?>
 										<div>
 											<?php if( !empty($column_trophy_title) ){ ?>
-												<h3><?= $column_trophy_title; ?></h3>
+												<h3><?php echo $column_trophy_title; ?></h3>
 											<?php }
 											if( !empty($column_trophy_subtitle) ){ ?>
-												<p><?= $column_trophy_subtitle; ?></p>
+												<p><?php echo $column_trophy_subtitle; ?></p>
 											<?php } ?>
 										</div>
 									</div>

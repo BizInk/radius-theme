@@ -43,12 +43,12 @@ $global_logo_small_title = get_field('global_logo_small_title', 'options');
 			<?php if( !empty($footer_logo['url']) ){ ?>
 
 					<div class="footer-logo">
-						<a href="<?php echo site_url(); ?>"><img src="<?php echo $footer_logo['url']; ?>" alt="<?php echo $footer_logo['alt']; ?>"></a>
+						<a href="<?php echo site_url(); ?>"><img src="<?php echo $footer_logo['url']; ?>" alt="<?php echo $footer_logo['alt'] ? $footer_logo['alt'] : bloginfo( 'name' ); ?>"></a>
 					</div>
 				<?php } ?>
 		</div>
 		<div class="row footer-wrap">
-			<div class="col-md-6 col-xl-3 mb-4 mb-lg-0 pe-md-5">
+			<div class="col-12 col-md-6 col-xl-3 mb-4 mb-lg-0 pe-md-5">
 				<?php if( !empty($column_1_title) ){ ?>
 
 					<h5><?php echo $column_1_title; ?></h5>
@@ -62,7 +62,7 @@ $global_logo_small_title = get_field('global_logo_small_title', 'options');
 				<?php } ?>
 			</div>
 
-			<div class="col-md-6 col-xl-4 col-xxl-3 mb-5 mb-lg-0">
+			<div class="col-12 col-md-6 col-xl-4 col-xxl-3 mb-5 mb-lg-0">
 				<?php if( !empty($column_2_title) ){ ?>
 
 					<h5><?php echo $column_2_title; ?></h5>
@@ -83,7 +83,7 @@ $global_logo_small_title = get_field('global_logo_small_title', 'options');
 				</nav>
 			</div>
 
-			<div class="col-md-6 col-xl-2 col-xxl-3 mb-5 mb-lg-0">
+			<div class="col-12 col-md-6 col-xl-2 col-xxl-3 mb-5 mb-lg-0">
 				<?php if( !empty($column_3_title) ){ ?>
 
 					<h5><?php echo $column_3_title; ?></h5>
@@ -122,7 +122,7 @@ $global_logo_small_title = get_field('global_logo_small_title', 'options');
 				</nav>
 			</div>
 
-			<div class="col-md-6 col-xl-3 col-xxl-3">
+			<div class="col-12 col-md-6 col-xl-3 col-xxl-3">
 				<?php if( !empty($column_4_title) ){ ?>
 
 					<h5><?php echo $column_4_title; ?></h5>
@@ -158,7 +158,7 @@ $global_logo_small_title = get_field('global_logo_small_title', 'options');
 		<div class="social-wrap">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-12">
 						<div class="copyright-wrap" style="color:<?php echo get_field('copyright_color', 'options') ? get_field('copyright_color', 'options') : '#fefefe'; ?>;">
 							<?php echo do_shortcode($copyright_information); ?> | <a style="color:<?php echo get_field('copyright_color', 'options') ? get_field('copyright_color', 'options') : '#fefefe'; ?>;" target="_blank" href="https://www.bizinkonline.com"><?php _e('Website By Bizink','radius-theme');?>
 						</div>
