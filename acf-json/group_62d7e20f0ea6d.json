@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_62d7e21e5e299",
@@ -59,7 +60,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_62d7e2415e29b",
@@ -85,26 +87,6 @@
             "key": "field_62d7e2515e29c",
             "label": "Full Profile",
             "name": "member_full_profile",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_63da4660125fb",
-            "label": "Skillset",
-            "name": "member_skillset",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -195,7 +177,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_62d7e2bc5e2a2",
@@ -267,5 +250,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692852066
+    "modified": 1726212458
 }

@@ -95,7 +95,6 @@ $member_instagram = get_field('member_instagram');
                     if( !empty($member_skillset) ){ ?>
 
                         <div class="skillset">
-                             <h5><?php _e('Skillset','radius-theme'); ?></h5>
                              <div class="editor-design">
                                 <?php echo $member_skillset; ?>
                              </div>

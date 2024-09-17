@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_62da7fea00916",
@@ -59,7 +60,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_62ed01c37e22d",
@@ -286,60 +288,6 @@
             "new_lines": ""
         },
         {
-            "key": "field_62de770572de7",
-            "label": "Settings- Dashboard",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_62de771472de8",
-            "label": "Feed title",
-            "name": "feed_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_62de772372de9",
-            "label": "Feed URL",
-            "name": "feed_url",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_655f50c535485",
             "label": "Enable Features",
             "name": "",
@@ -354,7 +302,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_655f50e132481",
@@ -400,26 +349,6 @@
             "key": "field_655f510c35487",
             "label": "Packages",
             "name": "enable_packages",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 1,
-            "ui_on_text": "On",
-            "ui_off_text": "Off",
-            "ui": 1
-        },
-        {
-            "key": "field_655f516035488",
-            "label": "Testimonials",
-            "name": "enable_testimonials",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -575,5 +504,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1686099927
+    "modified": 1726207940
 }
