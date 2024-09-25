@@ -21145,6 +21145,10 @@ body .gform_confirmation_message {
     margin-bottom: 3rem;
   }
 }
+.teamlist-section .team-member a{
+  text-decoration: none;
+}
+
 .teamlist-section .team-member .team-member-wrap {
   overflow: hidden;
   display: block;
@@ -21224,13 +21228,12 @@ body .gform_confirmation_message {
   transition: 0.3s ease-in-out;
   -ms-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
+  text-decoration: none;
 }
 .teamlist-section .team-member .team-member-wrap .member-details h4, .teamlist-section .team-member .team-member-wrap .member-details .h4 {
   font-weight: 600;
   margin-bottom: 15px;
   font-size: 3rem;
-}
-.teamlist-section .team-member .team-member-wrap .member-details h4 a, .teamlist-section .team-member .team-member-wrap .member-details .h4 a {
   text-decoration: none;
 }
 .teamlist-section .team-member .team-member-wrap .member-details h6, .teamlist-section .team-member .team-member-wrap .member-details .h6 {

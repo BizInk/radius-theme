@@ -29,46 +29,47 @@ if( !empty($team_members) ){ ?>
                     $member_instagram = get_field('member_instagram', $team_member); ?>
 
                     <div class="col-md-6 col-lg-4 col-xl-3 team-member">
-                        <div class="team-member-wrap">
-
-                            <div class="member-img">
-                                <?php if( !empty($member_image) ){ ?>
-                                    
-                                    <img src="<?php echo $member_image; ?>" class="img-fluid" alt="<?php echo $team_member->post_title; ?>">
-                                <?php } ?>
-
-                                <div class="team-social-wrap">
-                                    <div class="plus-icon"> 
-                                        +
-                                    </div>
-                                    <div class="team-social">
-                                        <?php if( !empty($member_facebook) ){ ?>
-
-                                            <a href="<?php echo $member_facebook; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>   
-                                        <?php }
-
-                                        if( !empty($member_linkedin) ){ ?>
+                        <a href="<?php echo get_permalink($team_member); ?>">
+                            <div class="team-member-wrap">
+                                <div class="member-img">
+                                    <?php if( !empty($member_image) ){ ?>
                                         
-                                            <a href="<?php echo $member_linkedin; ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                        <?php }
+                                        <img src="<?php echo $member_image; ?>" class="img-fluid" alt="<?php echo $team_member->post_title; ?>">
+                                    <?php } ?>
 
-                                        if( !empty($member_instagram) ){ ?>
-                                        
-                                            <a href="<?php echo $member_instagram; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                        <?php } ?>
+                                    <div class="team-social-wrap">
+                                        <div class="plus-icon"> 
+                                            +
+                                        </div>
+                                        <div class="team-social">
+                                            <?php if( !empty($member_facebook) ){ ?>
+
+                                                <a href="<?php echo $member_facebook; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>   
+                                            <?php }
+
+                                            if( !empty($member_linkedin) ){ ?>
+                                            
+                                                <a href="<?php echo $member_linkedin; ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                            <?php }
+
+                                            if( !empty($member_instagram) ){ ?>
+                                            
+                                                <a href="<?php echo $member_instagram; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                            <?php } ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="member-details">
-                                <?php if( !empty($member_position) ){ ?>
-                                    
-                                    <h6><?= $member_position; ?></h6>
-                                <?php } ?>
+                                <div class="member-details">
+                                    <?php if( !empty($member_position) ){ ?>
+                                        
+                                        <h6><?= $member_position; ?></h6>
+                                    <?php } ?>
 
-                                <h4><a href="<?php echo get_permalink($team_member); ?>"><?php echo $team_member->post_title; ?></h4></a>
+                                    <h4><?php echo $team_member->post_title; ?></h4>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 <?php } ?>
             </div>

@@ -69,6 +69,7 @@ if( !empty($team_members) ){ ?>
 							$member_position = get_field('member_position', $team_member); ?>
 
 							<div class="col-md-6 team-member">
+								<a href="<?php echo get_permalink($team_member); ?>">
 								<?php 
 								if( !empty($member_image) ){ ?>
 									<div class="member-img">						
@@ -89,6 +90,7 @@ if( !empty($team_members) ){ ?>
 										<?php } ?>
 									</div>
 								</div>
+								</a>
 							</div>
 						<?php } ?>
 					</div>
