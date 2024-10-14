@@ -38,19 +38,14 @@ if( $posts_loop->have_posts() ){ ?>
 
                     while ( $posts_loop->have_posts() ) {
                         $posts_loop->the_post();
-                        $post_image = has_post_thumbnail() ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/images/default.jpg';
                         ?>
 
                         <div class="col-md-6 col-xl-4 team-member weekly-digest" <?= $posts_counter > $ppp ? 'style="display:none;"' : ''; ?> data-pagenumber="posts<?= ceil($posts_counter/$ppp); ?>">
                             <div class="team-member-wrap">
-                                <a href="<?php the_permalink(); ?>" class="member-img">
-                                    <img src="<?= $post_image; ?>" alt="post-img">
-                                </a>
                                 <div class="member-details">
                                     <a href="<?php the_permalink(); ?>">
                                         <h4 class="member-name"><?php the_title(); ?></h4>
                                     </a>
-
                                     <p><?php the_excerpt(); ?></p>
                                     <a href="<?php the_permalink(); ?>" class="readmore"><?php _e('Read More','radius-theme');?></a>
                                 </div>
