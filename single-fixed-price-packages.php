@@ -28,15 +28,11 @@ $package_details_button_2 = get_field('package_details_button_2');
                     </div>
 
                     <?php if( have_rows('price_features') ){ ?>
-
                         <ul>
                             <?php while( have_rows('price_features') ){
                                 the_row();
-
                                 $features = get_sub_field('features');
-
                                 if( !empty($features) ){ ?>
-
                                     <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/check-icon.svg" alt=""> <span><?php echo $features; ?></span></li>
                                 <?php }
                             } ?>

@@ -28,27 +28,25 @@ $client_area_toggle = get_field('client_area_toggle', 'options');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
 	<?php
 	$header_custom_css = get_field('header_custom_css', 'option');
-	
 	if( !empty($header_custom_css) ){
-
 		echo '<style>'. $header_custom_css .'</style>';
-	} ?>
-
-	<?php wp_head(); ?>
+	} 
+	wp_head();
+	?>
 </head>
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
-	<?php do_action('wp_body_open'); ?>
+	<?php 
+	do_action('wp_body_open'); 
+	if(get_post_type() != 'landing-page'):
+	?>
 	<div class="site" id="page">
-
 		<!-- ******************* The Navbar Area ******************* -->
 		<header id="wrapper-navbar" class="">
 			<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
@@ -133,3 +131,4 @@ $client_area_toggle = get_field('client_area_toggle', 'options');
 			</div>
 			<?php get_template_part('global-templates/navbar', $navbar_type . '-' . $bootstrap_version); ?>
 		</header>
+		<?php endif; ?>

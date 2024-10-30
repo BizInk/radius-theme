@@ -44,12 +44,9 @@ file_put_contents($output_file, $compiled_css);
 get_header();
 
 if( !is_front_page() ){
-
   get_template_part('global-templates/inner-banner');
 }
 
-?>
-<?php
 if( have_rows('page_flexible_content') ): 
   while( have_rows('page_flexible_content') ): the_row();
     if( get_row_layout() == 'info_box' ):
@@ -92,7 +89,6 @@ if( have_rows('page_flexible_content') ):
     endif;  
   endwhile;
 endif;  
-?>
-<?php
+
 get_footer();
 ?>

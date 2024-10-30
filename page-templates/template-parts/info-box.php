@@ -10,25 +10,29 @@ $info_box_content = get_sub_field('info_box_content');
 $general_class = '';
 
 if( in_array('Add Common Padding', $general_settings) ){
-
 	$general_class .= ' comman-padding';
 }
 
 if( in_array('Add Common Margin', $general_settings) ){
-
 	$general_class .= ' comman-margin';
 }
 
-if( $alignment['value'] == "Align left" ){
-	$align_class .= 'text-start';
+switch($alignment['value']) {
+	case 'Align left':
+		$align_class = ' text-start';
+		break;
+	case 'Align right':
+		$align_class = ' text-end';
+		break;
+	case 'Align center':
+		$align_class = ' text-center';
+		break;
+	default:
+		$align_class = '';
 }
 
-if( $alignment['value'] == "Align right"  ){
-	$align_class .= 'text-end';
-}
+switch($column_count){
 
-if( $alignment['value'] == "Align center" ){
-	$align_class .= 'text-center';
 }
 
 if( have_rows('information_box') ):
@@ -74,7 +78,7 @@ if( have_rows('information_box') ):
 								$info_description = get_sub_field('info_description'); 
 								$info_button = get_sub_field('info_button');
 								?>
-								<div class="<?php echo $column_count; ?>">
+								<div class="col-12 <?php echo $column_count; ?>">
 									<div class="info-box h-100 <?php echo $align_class ?>">
 
 										<?php if( !empty($info_image) ) { ?>

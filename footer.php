@@ -8,6 +8,9 @@
 */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
+
+if(get_post_type() != 'landing-page'):
+
 $container = get_theme_mod('understrap_container_type');
 get_template_part('sidebar-templates/sidebar', 'footerfull');
 
@@ -169,7 +172,9 @@ $global_logo_small_title = get_field('global_logo_small_title', 'options');
 	<?php } ?>
 </footer>
 </div><!-- #page we need this extra closing tag here -->
-<?php wp_footer(); ?>
+<?php 
+endif;
+wp_footer(); ?>
 
 <script>
 
