@@ -72,7 +72,7 @@ class radius_author_widget extends WP_Widget {
                     if( !empty($author_facebook_url) || !empty($author_linkedin_url) || !empty($author_instagram_url) ){ ?>
 
                         <div class="social-wrap">
-                            <ul class="social-nav">
+                            <ul class="social-icons">
                                 <?php if( !empty($author_facebook_url) ){ ?>
 
                                     <li><a href="<?php echo $author_facebook_url; ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

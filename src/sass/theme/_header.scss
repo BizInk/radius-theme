@@ -109,7 +109,7 @@
         }
       }
 
-      .social-nav {
+      .social-icons {
         @include media-breakpoint-down(md) {
           position: absolute;
           right: 0;
@@ -125,7 +125,7 @@
         }
       }
     }
-    .social-nav {
+    .social-icons {
       ul li a {
         font-size: 23px;
       }

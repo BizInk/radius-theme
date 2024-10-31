@@ -17678,7 +17678,7 @@ button:focus {
 .top-nav .container .header-contact ul li a:hover {
   text-decoration: underline;
 }
-.top-nav .container .header-contact .social-nav ul {
+.top-nav .container .header-contact .social-icons ul {
   flex-direction: row;
 }
 header {
@@ -18083,18 +18083,18 @@ footer .disclamer-wrap {
 .footer-wrap .contact-details ul li a i {
   margin-right: 10px;
 }
-.footer-wrap .social-nav ul {
+.footer-wrap .social-icons ul {
   display: flex;
 }
-.footer-wrap .social-nav ul li {
+.footer-wrap .social-icons ul li {
   margin: 0 5px;
 }
-.footer-wrap .social-nav ul li a {
+.footer-wrap .social-icons ul li a {
   padding: 5px;
   font-size: 15px;
   text-decoration: none;
 }
-.footer-wrap .social-nav ul li a i {
+.footer-wrap .social-icons ul li a i {
   font-size: 27px;
   transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -21302,29 +21302,29 @@ body .gform_confirmation_message {
   border-left: 0;
   border-right: 0;
 }
-.member-details-section .social-wrap ul.social-nav {
+.member-details-section .social-wrap ul.social-icons {
   margin-bottom: 0;
   display: flex;
   align-items: center;
   margin-right: 1rem;
 }
-.member-details-section .social-wrap ul.social-nav li {
+.member-details-section .social-wrap ul.social-icons li {
   padding-left: 0;
   margin: 0 5px;
 }
-.member-details-section .social-wrap ul.social-nav li:before {
+.member-details-section .social-wrap ul.social-icons li:before {
   background: none;
 }
-.member-details-section .social-wrap ul.social-nav li a {
+.member-details-section .social-wrap ul.social-icons li a {
   padding: 5px;
   font-size: 18px;
   text-decoration: none;
 }
-.member-details-section .social-wrap ul.social-nav li a img {
+.member-details-section .social-wrap ul.social-icons li a img {
   max-width: 25px;
   margin-right: 5px;
 }
-.member-details-section .social-wrap ul.social-nav li:before {
+.member-details-section .social-wrap ul.social-icons li:before {
   display: none;
 }
 

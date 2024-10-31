@@ -232,25 +232,21 @@ function dashboard_widget_function( $post, $callback_args ) {
 }
 
 add_filter( 'gform_enable_password_field', '__return_true' );
-add_filter('acf/settings/save_json', 'my_acf_json_save_point');
- 
-function my_acf_json_save_point( $path ) {
-    // update path
+
+
+function radius_json_save_point( $path ) {
     $path = get_stylesheet_directory() . '/acf-json';
-    // return
     return $path;
 }
+add_filter('acf/settings/save_json', 'radius_json_save_point');
 
-add_filter('acf/settings/load_json', 'my_acf_json_load_point');
-
-function my_acf_json_load_point( $paths ) {
+function radius_json_load_point( $paths ) {
     // remove original path (optional)
     unset($paths[0]);
-    // append path
     $paths[] = get_stylesheet_directory() . '/acf-json';
-    // return
     return $paths;
 }
+add_filter('acf/settings/load_json', 'radius_json_load_point');
 
 // Adding option to select gravity form in ACF
 add_filter( 'acf/load_field/name=gravity_forms', 'luca_acf_populate_gf_forms_ids' );

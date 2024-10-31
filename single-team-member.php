@@ -67,7 +67,7 @@ $member_instagram = get_field('member_instagram');
 
                         <div class="social-wrap">
                           <h5><?php _e('Follow me:','radius-theme'); ?></h5>
-                          <ul class="social-nav">
+                          <ul class="social-icons">
                                 
                                 <?php if( !empty($member_facebook) ){ ?>
 

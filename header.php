@@ -66,7 +66,7 @@ $client_area_toggle = get_field('client_area_toggle', 'options');
 						</ul>
 
 						<!-- Social icons -->
-						<nav class="social-nav">
+						<nav class="social-icons">
 							<ul>
 								<?php if( !empty($facebook) ){ ?>
 									

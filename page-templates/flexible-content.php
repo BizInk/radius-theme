@@ -40,55 +40,79 @@ $compiled_css = $scss->compile('
 
 file_put_contents($output_file, $compiled_css);
 
-
 get_header();
 
 if( !is_front_page() ){
   get_template_part('global-templates/inner-banner');
 }
 
-if( have_rows('page_flexible_content') ): 
-  while( have_rows('page_flexible_content') ): the_row();
-    if( get_row_layout() == 'info_box' ):
-        get_template_part('page-templates/template-parts/info-box');
-      elseif( get_row_layout() == 'hero_section' ):
-        get_template_part('page-templates/template-parts/hero-section');
-      elseif( get_row_layout() == 'two_column' ):
-        get_template_part('page-templates/template-parts/two-column');
-      elseif( get_row_layout() == 'logo' ):
-        get_template_part('page-templates/template-parts/logo');       
-      elseif( get_row_layout() == 'counter' ):
-        get_template_part('page-templates/template-parts/counter');
-      elseif( get_row_layout() == 'form-block' ):
-        get_template_part('page-templates/template-parts/form-block');
-      elseif( get_row_layout() == 'call_to_action' ):
-          get_template_part('page-templates/template-parts/call-to-action');
-      elseif( get_row_layout() == 'testimonial' ):
-          get_template_part('page-templates/template-parts/testimonial');
-      elseif( get_row_layout() == 'full_width_section' ):
-          get_template_part('page-templates/template-parts/full-width');
-      elseif( get_row_layout() == 'pricing' ):
-          get_template_part('page-templates/template-parts/pricing');
-      elseif( get_row_layout() == 'sign_up' ):
-          get_template_part('page-templates/template-parts/sign-up');
-      elseif( get_row_layout() == 'get_to_know_section' ):
-          get_template_part('page-templates/template-parts/get-to-know-section');
-      elseif( get_row_layout() == 'accordions' ):
-          get_template_part('page-templates/template-parts/accordions');
-      elseif( get_row_layout() == 'latest-posts' ):
-          get_template_part('page-templates/template-parts/latest-posts');
-      elseif( get_row_layout() == 'newsletter' ):
-          get_template_part('page-templates/template-parts/newsletter');
-      elseif( get_row_layout() == 'full_width_section_contents' ):
-          get_template_part('page-templates/template-parts/full-width-contents');
-      elseif( get_row_layout() == 'four_column_videos' ):
-          get_template_part('page-templates/template-parts/four-col-videos');
-      elseif( get_row_layout() == 'team' ):
-          get_template_part('page-templates/template-parts/team');
-      
-    endif;  
-  endwhile;
-endif;  
+if (function_exists('have_rows') && function_exists('get_row_layout')):
+  if (have_rows('page_flexible_content')):
+      while (have_rows('page_flexible_content')):
+          the_row();
+
+          switch (get_row_layout()) {
+              case 'info_box':
+                  get_template_part('page-templates/template-parts/info-box');
+                  break;
+              case 'hero_section':
+                  get_template_part('page-templates/template-parts/hero-section');
+                  break;
+              case 'two_column':
+                  get_template_part('page-templates/template-parts/two-column');
+                  break;
+              case 'logo':
+                  get_template_part('page-templates/template-parts/logo');
+                  break;
+              case 'counter':
+                  get_template_part('page-templates/template-parts/counter');
+                  break;
+              case 'form-block':
+                  get_template_part('page-templates/template-parts/form-block');
+                  break;
+              case 'call_to_action':
+                  get_template_part('page-templates/template-parts/call-to-action');
+                  break;
+              case 'testimonial':
+                  get_template_part('page-templates/template-parts/testimonial');
+                  break;
+              case 'full_width_section':
+                  get_template_part('page-templates/template-parts/full-width');
+                  break;
+              case 'pricing':
+                  get_template_part('page-templates/template-parts/pricing');
+                  break;
+              case 'sign_up':
+                  get_template_part('page-templates/template-parts/sign-up');
+                  break;
+              case 'get_to_know_section':
+                  get_template_part('page-templates/template-parts/get-to-know-section');
+                  break;
+              case 'accordions':
+                  get_template_part('page-templates/template-parts/accordions');
+                  break;
+              case 'latest-posts':
+                  get_template_part('page-templates/template-parts/latest-posts');
+                  break;
+              case 'newsletter':
+                  get_template_part('page-templates/template-parts/newsletter');
+                  break;
+              case 'full_width_section_contents':
+                  get_template_part('page-templates/template-parts/full-width-contents');
+                  break;
+              case 'four_column_videos':
+                  get_template_part('page-templates/template-parts/four-col-videos');
+                  break;
+              case 'team':
+                  get_template_part('page-templates/template-parts/team');
+                  break;
+              case 'wideteam':
+                  get_template_part('page-templates/template-parts/wideteam');
+                  break;
+          }
+      endwhile;
+  endif;
+endif;
 
 get_footer();
 ?>

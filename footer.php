@@ -92,7 +92,7 @@ $global_logo_small_title = get_field('global_logo_small_title', 'options');
 					<h5><?php echo $column_3_title; ?></h5>
 				<?php } ?>
 
-				<nav class="social-nav">
+				<nav class="social-icons">
 					<ul>
 						<?php if( !empty($facebook) ){ ?>
 								

@@ -3,7 +3,7 @@ Contributors: Bizink,Jayden Major
 Tags: Bizink, Radius
 Requires at least: 5.6
 Tested up to: 6.6.2
-Stable tag: 1.4.4
+Stable tag: 1.4.5
 Requires PHP: 7.4
 
 The Radius theme
@@ -12,6 +12,10 @@ The Radius theme
 The Radius theme
 
 == Changelog ==
+
+= 1.4.5 =
+* Large Team Page
+* Social Icons Fix
 
 = 1.4.4 =
 * Landing Page Header & Footer

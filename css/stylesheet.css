@@ -114,15 +114,15 @@ h2 {
         .top-nav .container .client-area-wrap ul li a:hover {
           color: #e5e5e5;
           background-color: #6dd622; }
-    .top-nav .container .social-nav ul li a {
+    .top-nav .container .social-icons ul li a {
       color: #1e73be; }
-      .top-nav .container .social-nav ul li a:hover {
+      .top-nav .container .social-icons ul li a:hover {
         color: #6dd622; }
     .top-nav .container .header-contact ul li a {
       color: #e5e5e5; }
       .top-nav .container .header-contact ul li a:hover {
         color: #6dd622; }
-  .top-nav .social-nav ul li a {
+  .top-nav .social-icons ul li a {
     color: #e5e5e5; }
 
 header.fixed {
@@ -200,9 +200,9 @@ footer {
       color: #6dd622; }
     footer .footer-wrap h5 {
       color: #6dd622; }
-    footer .footer-wrap .social-nav ul li a i {
+    footer .footer-wrap .social-icons ul li a i {
       color: #e5e5e5; }
-    footer .footer-wrap .social-nav ul li a i:hover {
+    footer .footer-wrap .social-icons ul li a i:hover {
       color: #6dd622; }
     footer .footer-wrap address {
       color: #e5e5e5; }
@@ -652,9 +652,9 @@ footer {
     border: 1px solid rgba(30, 115, 190, 0.15);
     border-left: 0;
     border-right: 0; }
-  .member-details-section .social-wrap ul.social-nav li a {
+  .member-details-section .social-wrap ul.social-icons li a {
     color: #1e73be; }
-  .member-details-section .social-wrap ul.social-nav li a:hover {
+  .member-details-section .social-wrap ul.social-icons li a:hover {
     color: #6dd622; }
 
 .get-in-touch:before {
