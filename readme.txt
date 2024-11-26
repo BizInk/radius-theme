@@ -2,8 +2,8 @@
 Contributors: Bizink,Jayden Major
 Tags: Bizink, Radius
 Requires at least: 5.6
-Tested up to: 6.6.2
-Stable tag: 1.4.6
+Tested up to: 6.7.1
+Stable tag: 1.4.7
 Requires PHP: 7.4
 
 The Radius theme
@@ -12,6 +12,9 @@ The Radius theme
 The Radius theme
 
 == Changelog ==
+
+= 1.4.7 =
+* Version Bump
 
 = 1.4.6 =
 * Login Logo
