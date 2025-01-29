@@ -217,25 +217,18 @@ wp_footer(); ?>
 		}
 	}
 </script>
-
 <?php if( is_home() ){ ?>
-
 	<script>
-
 		fetch_blog_posts(); 
-
 		jQuery(document).on('click', '.filter-wrap li', function(e){
 			e.preventDefault();
-
 			jQuery('.filter-wrap li.active').removeClass('active');
 			jQuery(this).addClass('active');
-
 			fetch_blog_posts(jQuery(this).attr('data-cat'));
 		});
 
 		jQuery(document).on('click', '.load-more', function(e){
 			e.preventDefault();
-
 			fetch_blog_posts(jQuery('.filter-wrap li.active').attr('data-cat'), jQuery(this).attr('data-pagenumber'));
 		});
 	</script>
