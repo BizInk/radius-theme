@@ -38,6 +38,12 @@ $copyright_information = get_field('copyright_information', 'options');
 
 $global_logo_bg_title = get_field('global_logo_bg_title', 'options');
 $global_logo_small_title = get_field('global_logo_small_title', 'options');
+
+$custom_embed_code_after_body = get_field('custom_embed_code_after_body', 'options');
+if( !empty($custom_embed_code_after_body) ){
+	echo $custom_embed_code_after_body;
+}
+$custom_embed_code_footer = get_field('custom_embed_code_-_footer', 'options');
 ?>
 
 <footer>
@@ -233,12 +239,10 @@ wp_footer(); ?>
 			fetch_blog_posts(jQuery('.filter-wrap li.active').attr('data-cat'), jQuery(this).attr('data-pagenumber'));
 		});
 	</script>
-<?php }
-
+<?php
+}
 if( is_category() ){
-
 	$current_category = get_query_var('cat'); ?>
-
 	<script>
 		var current_cat = '<?php echo $current_category; ?>';
 		fetch_blog_posts(current_cat);
@@ -249,7 +253,11 @@ if( is_category() ){
 			fetch_blog_posts(current_cat, jQuery(this).attr('data-pagenumber'));
 		});
 	</script>
-<?php } ?>
-
+<?php 
+} 
+if( !empty($custom_embed_code_footer) ){
+	echo $custom_embed_code_footer;
+}
+?>
 </body>
 </html>

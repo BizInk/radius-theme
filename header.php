@@ -25,6 +25,7 @@ $youtube = get_field('youtube', 'options');
 $header_client_button = get_field('header_client_button', 'options');
 $client_area_toggle = get_field('client_area_toggle', 'options');
 
+$custom_embed_code_head = get_field('custom_embed_code_head', 'options');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -38,6 +39,9 @@ $client_area_toggle = get_field('client_area_toggle', 'options');
 		echo '<style>'. $header_custom_css .'</style>';
 	} 
 	wp_head();
+	if( !empty($custom_embed_code_head) ){
+		echo $custom_embed_code_head;
+	}
 	?>
 </head>
 
