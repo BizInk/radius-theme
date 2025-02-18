@@ -10,6 +10,8 @@ defined( 'ABSPATH' ) || exit;
 
 define('DEFAULT_IMG', get_stylesheet_directory_uri().'/images/default.jpg');
 
+include 'inc/savecss.php';
+include 'inc/cpt.php';
 
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
@@ -22,8 +24,6 @@ function understrap_remove_scripts() {
 	wp_deregister_script( 'understrap-scripts' );
 }
 add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
-
-
 
 /**
  * Enqueue our stylesheet and javascript file
@@ -127,7 +127,6 @@ function wpdocs_add_dashboard_widgets() {
 }
 add_action( 'wp_dashboard_setup', 'wpdocs_add_dashboard_widgets' );
 
-include 'inc/cpt.php';
 
 /*
 *	Re-usable RSS feed reader with shortcode

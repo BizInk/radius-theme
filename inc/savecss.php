@@ -33,7 +33,7 @@ function process_scss(){
     else{
         $run_scss = true;
     }
-    $run_scss = true;
+    
     if($run_scss){
         require "scss.inc.php";
         $scss = new scssc();
