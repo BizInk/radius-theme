@@ -41,18 +41,18 @@ function process_scss(){
         $path = get_stylesheet_directory() . '/src/sass/settings.scss';
         
         $compiled_css = $scss->compile('
-        $primary: ' . $global_theme_color1 . ';
-        $yellow: ' . $global_theme_color2 . ';
-        $red: '.$global_theme_color2.';
-        $white: ' . $global_theme_color3 . ';
-        $dark: ' . $global_theme_color4 . ';
-        $neutral-blue: ' . $global_theme_color5 . ';
-        $orange: '.$global_theme_color5.';
-        $light-gray: ' . $global_theme_color6 . ';
-        $neutral-light-blue: ' . $global_theme_color7 . ';
-        $font-family: "Roboto Slab", serif;
-        $font-family2: "Poppins, sans-serif";
-        @import "' . $path . '";
+            $primary: ' . $global_theme_color1 . ';
+            $yellow: ' . $global_theme_color2 . ';
+            $red: '.$global_theme_color2.';
+            $white: ' . $global_theme_color3 . ';
+            $dark: ' . $global_theme_color4 . ';
+            $neutral-blue: ' . $global_theme_color5 . ';
+            $orange: '.$global_theme_color5.';
+            $light-gray: ' . $global_theme_color6 . ';
+            $neutral-light-blue: ' . $global_theme_color7 . ';
+            $font-family: "Roboto Slab", serif;
+            $font-family2: "Poppins, sans-serif";
+            @import "' . $path . '";
         ');
 
         file_put_contents($output_file, $compiled_css);
