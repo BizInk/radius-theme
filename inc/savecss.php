@@ -16,7 +16,7 @@ function process_scss(){
 
     $cached_colors = get_transient('saved_theme_colors');
     $run_scss = false;
-    if( !empty($cached_colors) ){
+    if( $cached_colors != false ){
         if( 
             $cached_colors['global_theme_color1'] != $global_theme_color1 || 
             $cached_colors['global_theme_color2'] != $global_theme_color2 || 
