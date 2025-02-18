@@ -8,8 +8,11 @@
 */
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+include get_template_directory() . '/inc/password-check.php';
+
 get_header();
 get_template_part('global-templates/inner-banner');
+
 $videos_top_small_title = get_field('videos_top_small_title');
 $videos_top_title = get_field('videos_top_title');
 $videos_top_desc = get_field('videos_top_desc');

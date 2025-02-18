@@ -95,6 +95,14 @@ class scssc {
 
 	protected $formatter = "scss_formatter_nested";
 
+	protected $indentLevel = -1;
+	protected $commentsSeen = array();
+	protected $extends = array();
+	protected $extendsMap = array();
+	protected $parsedFiles = array();
+	protected $env = null;
+	protected $scope = null;
+	protected $parser = null;
 	/**
 	 * Compile scss
 	 *
@@ -1242,7 +1250,15 @@ class scssc {
 			// [3] - blue component
 			// [4] - optional alpha component
 			list(, $r, $g, $b) = $value;
-
+			if(is_numeric($r) == false){
+				$r = 255;
+			}
+			if(is_numeric($g) == false){
+				$g = 255;
+			}
+			if(is_numeric($b) == false){
+				$b = 255;
+			}
 			$r = round($r);
 			$g = round($g);
 			$b = round($b);

@@ -135,4 +135,6 @@ $custom_embed_code_head = get_field('custom_embed_code_head', 'options');
 			</div>
 			<?php get_template_part('global-templates/navbar', $navbar_type . '-' . $bootstrap_version); ?>
 		</header>
-		<?php endif; ?>
+		<?php endif;
+include get_template_directory() . '/inc/password-check.php';
+?>

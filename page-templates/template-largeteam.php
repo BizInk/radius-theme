@@ -9,6 +9,8 @@
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
+include get_template_directory() . '/inc/password-check.php';
+
 get_header();
 
 get_template_part('global-templates/inner-banner');
