@@ -293,6 +293,7 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			} else {
 				// With no link mod type set this must be a standard <a> tag.
 				//$item_output .= '</a>';
+				$aero = '';
 				if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && $args->depth !== 1 ) {
 					$aero = '<span class="arrow-icon"></span>';
 				}
