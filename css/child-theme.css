@@ -21619,3 +21619,34 @@ header + .video-banner-section.comman-margin {
 }
 
 /*# sourceMappingURL=child-theme.css.map */
+
+.bizpress-glossary
+  .bizpress-glossary-component
+  .bizpress-glossary-paragraph
+  .bizpress-glossary-link {
+  font-size: 2rem !important;
+}
+.bizpress-glossary .bizpress-glossary-component h2.bizpress-glossary-title {
+  font-size: 5rem !important;
+}
+.bizpress-glossary .default-content ul li:before,
+.editor-design ul li:before {
+  content: "" !important;
+  display: none !important;
+}
+.bizpress-glossary
+  .bizpress-glossary-header
+  .bizpress-glossary-header-list
+  .bizpress-glossary-header-item {
+  font-size: 1.9rem !important;
+  padding: 0.2rem 2.2rem !important;
+}
+.bizpress-glossary
+  .bizpress-glossary-components
+  .bizpress-glossary-component
+  .bizpress-glossary-link {
+  font-size: 1.5rem !important;
+}
+.bizpress-glossary .bizpress-glossary-header {
+  grid-template-columns: 2rem 1fr 2rem !important;
+}

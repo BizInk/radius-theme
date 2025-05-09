@@ -518,4 +518,4 @@ require 'plugin-update-checker/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 $myUpdateChecker = PucFactory::buildUpdateChecker('https://github.com/BizInk/radius-theme',__FILE__,'radius-theme');
 $myUpdateChecker->setBranch('master');
-$myUpdateChecker->setAuthentication('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');
+$myUpdateChecker->setAuthentication('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');
