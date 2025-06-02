@@ -19612,6 +19612,15 @@ body .gform_confirmation_message {
 .logo-section .logo-slider {
   padding-bottom: 40px;
 }
+.logo-section .logo-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.logo-section .logo-grid .logo{
+  max-width: 250px;
+  margin:1rem;
+}
 .logo-section .logo-slider .logo {
   padding: 0 30px;
 }

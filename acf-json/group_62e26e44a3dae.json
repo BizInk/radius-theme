@@ -863,23 +863,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "choices": {
-                                        "12": "7 Steps to an effective business plan",
-                                        "11": "7 Steps to growing your business",
-                                        "10": "7 steps to growing your business through exporting",
-                                        "9": "7 steps to increasing profit",
-                                        "8": "7 steps to making a start",
-                                        "7": "7 Steps to raising capital to grow your business",
-                                        "15": "Client Feedback Survey",
-                                        "3": "Contact Form",
-                                        "6": "Get started with QuickBooks Online",
-                                        "5": "Get started with Xero",
-                                        "2": "Job Application",
-                                        "1": "Newsletter Signup",
-                                        "14": "NZ AML",
-                                        "4": "Request a Consultation",
-                                        "13": "What's your Biggest Business Challenge?"
-                                    },
+                                    "choices": [],
                                     "default_value": false,
                                     "return_format": "value",
                                     "multiple": 0,
@@ -887,7 +871,9 @@
                                     "ui": 0,
                                     "ajax": 0,
                                     "placeholder": "",
-                                    "parent_repeater": "field_62e387c1bcd2a"
+                                    "parent_repeater": "field_62e387c1bcd2a",
+                                    "create_options": 0,
+                                    "save_options": 0
                                 },
                                 {
                                     "key": "field_62e387c1bcd31",
@@ -1087,7 +1073,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -1095,17 +1081,47 @@
                                 "Add Common Padding": "Add Common Padding",
                                 "Add Common Margin": "Add Common Margin"
                             },
-                            "allow_custom": 0,
                             "default_value": [],
+                            "return_format": "value",
+                            "allow_custom": 0,
+                            "allow_in_bindings": 1,
                             "layout": "horizontal",
                             "toggle": 0,
-                            "return_format": "value",
                             "save_custom": 0,
                             "custom_choice_button_text": "Add new choice"
                         },
                         {
-                            "key": "field_6369d2408ccc0",
-                            "label": "Title",
+                            "key": "field_6835124733124",
+                            "label": "Layout Type",
+                            "name": "layout_type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "slider": "Slider",
+                                "grid": "Grid"
+                            },
+                            "default_value": "slider",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_62e3a06a27269",
+                            "label": "Logo & Content Section",
                             "name": "",
                             "aria-label": "",
                             "type": "tab",
@@ -1117,7 +1133,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "placement": "top",
+                            "placement": "left",
                             "endpoint": 0,
                             "selected": 0
                         },
@@ -1140,24 +1156,6 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
-                        },
-                        {
-                            "key": "field_62e3a06a27269",
-                            "label": "Logo Section",
-                            "name": "",
-                            "aria-label": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "left",
-                            "endpoint": 0,
-                            "selected": 0
                         },
                         {
                             "key": "field_62e3a0772726a",
@@ -1241,6 +1239,28 @@
                                     },
                                     "default_value": "",
                                     "placeholder": "",
+                                    "parent_repeater": "field_62e3a0772726a"
+                                },
+                                {
+                                    "key": "field_683d27bfc23f9",
+                                    "label": "ALT Text",
+                                    "name": "alt_text",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
                                     "parent_repeater": "field_62e3a0772726a"
                                 }
                             ]
@@ -2829,7 +2849,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "landing-page"
+                "value": "post"
             }
         ]
     ],
@@ -2838,12 +2858,9 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content",
-        "excerpt"
-    ],
+    "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730264934
+    "modified": 1748838349
 }

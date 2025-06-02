@@ -2,7 +2,7 @@
 <?php
 $general_settings = get_sub_field('general_settings'); 
 $general_class = '';
-
+$layout_type = get_sub_field('layout_type') ?? 'slider';
 if( in_array('Add Common Padding', $general_settings) ){
   
   $general_class .= ' comman-padding';
@@ -26,12 +26,13 @@ if( have_rows('logo') ): ?>
             </div>
         </div>
         <div class="container">
-            <div class="logo-slider">
+            <div class="<?php if($layout_type == 'grid'): echo 'logo-grid'; else: echo 'logo-slider'; endif; ?>">
                 <?php while( have_rows('logo') ):
                     the_row();
 
                     $slider_image = get_sub_field('slider_image');
                     $logo_url = get_sub_field('add_logo_url');
+                    $alt_text = get_sub_field('alt_text');
 
                     if( !empty($slider_image) ){ ?>
 
@@ -41,7 +42,7 @@ if( have_rows('logo') ): ?>
                                 <a href="<?php echo $logo_url; ?>">
                             <?php } ?>
                                 
-                                <img src="<?php echo $slider_image; ?>" class="img-fluid" alt="">
+                                <img src="<?php echo $slider_image; ?>" class="img-fluid" alt="<?php echo !empty($alt_text) ? $alt_text : 'Logo'; ?>">
                                 
                             <?php if( !empty($logo_url) ){ ?>
                                 
