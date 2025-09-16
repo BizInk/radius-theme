@@ -409,7 +409,7 @@ function fetch_blog_posts() {
 
 	$category = $_POST['category'];
 	$pagenumber = $_POST['pagenumber'];
-    $ppp = 3;
+    $ppp = get_option('posts_per_page') ? get_option('posts_per_page') : 9;
 
 	$posts_args = array(
 	    'post_status' => 'publish', 

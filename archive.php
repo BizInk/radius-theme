@@ -32,7 +32,7 @@ if( $posts_loop->have_posts() ){ ?>
 
                     <?php 
                     $posts_counter = 1;
-                    $ppp = 9;
+                    $ppp = get_option('posts_per_page') ? get_option('posts_per_page') : 9;
 
                     while ( $posts_loop->have_posts() ) {
                         $posts_loop->the_post();
