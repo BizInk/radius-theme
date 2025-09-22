@@ -26,6 +26,7 @@ $footer_shape_color_2 = get_field('footer_shape_color_2', 'options');
 
 $company_phone = get_field('company_phone', 'options');
 $company_email = get_field('company_email', 'options');
+$company_address = get_field('company_address', 'options');
 
 $facebook = get_field('facebook', 'options'); 
 $twitter = get_field('twitter', 'options'); 
@@ -86,7 +87,12 @@ $custom_embed_code_footer = get_field('custom_embed_code_-_footer', 'options');
 						
 						if( !empty($company_email) ){ ?>
 						
-							<li><a href="mailto:<?php echo $company_email; ?>" target="_blank"> <i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $company_email; ?></a></li>
+							<li><a href="mailto:<?php echo $company_email; ?>" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $company_email; ?></a></li>
+						<?php } 
+						
+						if(!empty($company_address) ){ ?>
+						
+							<li><a href="https://maps.google.com/q=<?php echo urlencode($company_address); ?>" target="_blank"><i class="fa fa-map" aria-hidden="true"></i> <?php echo $company_address; ?></a></li>
 						<?php } ?>
 					</ul>
 				</nav>

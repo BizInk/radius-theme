@@ -22,7 +22,7 @@ $member_instagram = get_field('member_instagram');
 
 <section class="member-details-section comman-margin">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-start">
             <div class="col-md-5">
                 <div class="member-img">
                     <img src="<?php echo $member_image; ?>" class="img-fluid" alt="<?php the_title(); ?>">         
