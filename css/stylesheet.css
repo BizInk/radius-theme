@@ -575,7 +575,7 @@ footer .social-wrap .container .copyright-wrap {
 .infobox-section .info-box a:hover {
   color: #dbdbdb;
 }
-.infobox-section .section-inner-wrapper {
+.infobox-section {
   background: #f7f6f6;
 }
 .infobox-section .section-inner-wrapper .cta {
