@@ -24,7 +24,7 @@ $company_address = get_field('company_address', 'options');
 $company_phone = get_field('company_phone', 'options');
 $company_email = get_field('company_email', 'options');
 ?>
-<section class="contact-section comman-margin">
+<section id="content" class="contact-section comman-margin">
     <div class="container">
         <div class="row">
             <div class="col-md-6">

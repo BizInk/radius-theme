@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 get_template_part('global-templates/inner-banner');
 ?>
-<section class="single-testimonial-banner comman-margin">
+<section id="content" class="single-testimonial-banner comman-margin">
     <div class="container bg-img-position" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/testimonial-banner.png);">
         <div class="row align-items-center"> 
             <div class="col-md-5">

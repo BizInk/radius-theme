@@ -25,7 +25,7 @@ $posts_loop = new WP_Query( $posts_args );
 
 if( $posts_loop->have_posts() ){ ?>
 
-    <section class="four-col-team-section comman-padding">      
+    <section id="content" class="four-col-team-section comman-padding">      
         <div class="container">
             <div class="team-wrap">
                 <div class="row g-lg-5">

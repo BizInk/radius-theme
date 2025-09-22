@@ -14,7 +14,7 @@ $container = get_theme_mod('understrap_container_type');
 get_template_part('global-templates/inner-banner');
 ?>
 
-<div class="wrapper blog-wraper comman-margin" id="single-wrapper">
+<div id="content" class="wrapper blog-wraper comman-margin" id="single-wrapper">
 
 	<div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 

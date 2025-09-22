@@ -5,7 +5,7 @@ defined('ABSPATH') || exit;
 get_header();
 get_template_part('global-templates/inner-banner'); ?>
 
-<section class="four-col-team-section blog-listing-section comman-margin">    
+<section id="content" class="four-col-team-section blog-listing-section comman-margin">    
     
 
     <div class="container">

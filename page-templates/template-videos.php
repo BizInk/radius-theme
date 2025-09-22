@@ -23,7 +23,7 @@ if( !empty($videos_featured_video) ){
 	$featured_video_url = get_field('video_url', $videos_featured_video);
 } ?>
 
-<section class="featured-video-section comman-margin">
+<section id="content" class="featured-video-section comman-margin">
 	<div class="full-width-wysiwyg text-center">
 		<div class="container">
 			<div class="editor-design">

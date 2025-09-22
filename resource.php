@@ -25,7 +25,7 @@ $content_topics = get_terms(array(
     'hide_empty' => false,
 ));
 ?>
-<section class="infobox-section resource-infobox services-infobox">
+<section id="content" class="infobox-section resource-infobox services-infobox">
 <?php
 if( !empty($content_topics) ){ ?>
 

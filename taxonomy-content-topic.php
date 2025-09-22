@@ -7,7 +7,7 @@ get_header();
 get_template_part('global-templates/inner-banner');
 ?>
 
-<section class="infobox-section checklist-infobox content-topic-section comman-padding">
+<section id="content" class="infobox-section checklist-infobox content-topic-section comman-padding">
 
     <div class="container">
 

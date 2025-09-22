@@ -10,7 +10,7 @@ $reviewer_designation = get_field('reviewer_designation');
 $reviewer_name = get_field('reviewer_name');
 ?>
 
-<section class="single-testimonial-banner comman-margin">
+<section id="content" class="single-testimonial-banner comman-margin">
     <div class="container bg-img-position" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/testimonial-banner.png);">
         <div class="row align-items-center">
             <?php if( has_post_thumbnail() ){ ?>

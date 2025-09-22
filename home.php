@@ -9,7 +9,7 @@ $categories = get_terms([
   'hide_empty' => true,
 ]); ?>
 
-<section class="four-col-team-section blog-listing-section comman-margin">    
+<section id="content" class="four-col-team-section blog-listing-section comman-margin">    
     
 
     <div class="container">

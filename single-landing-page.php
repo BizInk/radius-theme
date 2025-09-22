@@ -33,7 +33,7 @@ $compiled_css = $scss->compile('
 file_put_contents($output_file, $compiled_css);
 
 get_header();
-
+echo '<div id="content">';
 if( have_rows('page_flexible_content') ): 
   while( have_rows('page_flexible_content') ): the_row();
     if( get_row_layout() == 'info_box' ):
@@ -76,6 +76,6 @@ if( have_rows('page_flexible_content') ):
     endif;  
   endwhile;
 endif;
-
+echo '</div>';
 get_footer();
 ?>

@@ -30,7 +30,7 @@ $content_topics = get_terms(array(
 
 if( !empty($content_topics) ){ ?>
 
-    <section class="infobox-section resource-infobox comman-padding">
+    <section id="content" class="infobox-section resource-infobox comman-padding">
         <div class="full-width-wysiwyg text-center">
             <div class="container">
                 <div class="editor-design">

@@ -13,7 +13,7 @@ $package_details_button_1 = get_field('package_details_button_1');
 $package_details_button_2 = get_field('package_details_button_2');
 
 ?>
-<section class="package-details-section comman-margin">
+<section id="content" class="package-details-section comman-margin">
     <div class="container">
         <div class="row">
             <div class="col-md-4">

@@ -27,7 +27,7 @@ $posts_args = array(
 $posts_loop = new WP_Query( $posts_args );
 
 if( $posts_loop->have_posts() ){ ?>
-    <section class="four-col-team-section blog-listing-section comman-margin">     
+    <section id="content" class="four-col-team-section blog-listing-section comman-margin">     
         <div class="container">
             <div class="team-wrap blog-posts-cont">
                 <div class="row g-lg-5">

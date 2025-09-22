@@ -16,7 +16,7 @@ if (function_exists('process_scss')) {
 }
 
 get_header();
-
+echo '<div id="content">';
 if (!is_front_page()) {
     get_template_part('global-templates/inner-banner');
 }
@@ -88,4 +88,5 @@ if (function_exists('have_rows') && function_exists('get_row_layout')) {
         }
     }
 }
+echo '</div>';
 get_footer();

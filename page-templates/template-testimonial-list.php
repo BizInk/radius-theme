@@ -19,7 +19,7 @@ if( !empty($testimonial_list_testimonials) ){
 
     $testimonial_list_testimonials_arr = array_chunk($testimonial_list_testimonials, 3); ?>
 
-    <section class="testimonial-list testimonial-all-list comman-margin">   
+    <section id="content" class="testimonial-list testimonial-all-list comman-margin">   
         <div class="container">
             <div class="row"> 
                 <?php foreach( $testimonial_list_testimonials_arr as $testimonial_list_testimonial_chunk ){ ?>

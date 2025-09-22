@@ -15,7 +15,7 @@ $resource_first_button = get_field('resource_first_button');
 $resource_second_button = get_field('resource_second_button');
 ?>
 
-<section class="resource-video-section comman-margin">
+<section id="content" class="resource-video-section comman-margin">
     <div class="container">
 
         <?php if( !empty($resource_video_url) && !empty($resource_video_thumbnail['url']) ){ ?>
