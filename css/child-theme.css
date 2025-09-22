@@ -20385,7 +20385,7 @@ body .gform_confirmation_message {
   text-align: left;
 }
 .default-content ul li, .editor-design ul li {
-  list-style: none;
+  list-style: inside;
   padding-left: 4rem;
   position: relative;
   margin-bottom: 10px;

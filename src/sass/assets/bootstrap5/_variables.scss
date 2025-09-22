@@ -89,7 +89,8 @@ $theme-colors: (
   "dark":       $dark
 ) !default;
 // scss-docs-end theme-colors-map
-
+$light-blue: #338fdf; // Custom color variable for this theme
+$light-blue-bg: #338fdf; // Custom background color variable for this theme
 // scss-docs-start theme-colors-rgb
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
 // scss-docs-end theme-colors-rgb

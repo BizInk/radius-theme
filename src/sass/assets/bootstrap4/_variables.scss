@@ -87,7 +87,8 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
-
+$light-blue: #338fdf; // Custom color variable for this theme
+$light-blue-bg: #338fdf; // Custom background color variable for this theme
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
 
