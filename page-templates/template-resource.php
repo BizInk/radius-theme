@@ -9,7 +9,7 @@
  */
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
-include get_template_directory() . '/inc/password-check.php';
+// include get_template_directory() . '/inc/password-check.php';
 
 get_header();
 

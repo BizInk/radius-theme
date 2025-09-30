@@ -3,7 +3,7 @@ Contributors: Bizink,Jayden Major
 Tags: Bizink, Radius
 Requires at least: 5.6
 Tested up to: 6.8.2
-Stable tag: 1.6.4
+Stable tag: 1.6.5
 Requires PHP: 7.4
 
 The Radius theme
@@ -12,6 +12,10 @@ The Radius theme
 The Radius theme
 
 == Changelog ==
+
+= 1.6.5 =
+* Fix for Testimonial Grid layout
+* Removed reduntant page password checks
 
 = 1.6.4 =
 * Bug Fix - Toggle for Enabling Testimonials
