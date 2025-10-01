@@ -15,7 +15,7 @@ The Radius theme
 
 = 1.6.5 =
 * Fix for Testimonial Grid layout
-* Removed reduntant page password checks
+* Removed redundant page password checks
 
 = 1.6.4 =
 * Bug Fix - Toggle for Enabling Testimonials

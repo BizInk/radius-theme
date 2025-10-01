@@ -20685,8 +20685,8 @@ body .gform_confirmation_message {
 .testimonial-list.testimonial-all-list.single-testimonial h3, .testimonial-list.testimonial-all-list.single-testimonial .h3 {
   margin-bottom: 6rem;
 }
-.testimonial-list.testimonial-all-list.single-testimonial .row > div:nth-child(2) {
-  margin-top: 0;
+.testimonial-list .row > div:nth-child(2) {
+  margin-top: 0 !important;
 }
 .testimonial-list.testimonial-all-list.single-testimonial .our-word {
   margin: 0;
