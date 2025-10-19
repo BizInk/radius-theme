@@ -1,36 +1,9 @@
 <?php
 
-// Require below variable for change value from db
-
-// Require below library for compile
-require "page-templates/scss.inc.php";
-
-$scss = new scssc();
-
-$output_file =  get_stylesheet_directory().'/css/stylesheet.css';
-$path = get_stylesheet_directory().'/src/sass/settings.scss';
-
-$global_theme_color1 = get_field('global_theme_color1', 'option') ? get_field('global_theme_color1', 'option') : '#272343';
-$global_theme_color2 = get_field('global_theme_color2', 'option') ? get_field('global_theme_color2', 'option') : '#dc3f14';
-$global_theme_color3 = get_field('global_theme_color3', 'option') ? get_field('global_theme_color3', 'option') : '#ffffff';
-$global_theme_color4 = get_field('global_theme_color4', 'option') ? get_field('global_theme_color4', 'option') : '#000000';
-$global_theme_color5 = get_field('global_theme_color5', 'option') ? get_field('global_theme_color5', 'option') : '#f6b720';
-$global_theme_color6 = get_field('global_theme_color6', 'option') ? get_field('global_theme_color6', 'option') : '#f9f9f9';
-$global_theme_color7 = get_field('global_theme_color7', 'option') ? get_field('global_theme_color7', 'option') : '#e6f0ff';
-
-
-$compiled_css = $scss->compile('
-  $primary: '.$global_theme_color1.';
-  $red: '.$global_theme_color2.';
-  $white: '.$global_theme_color3.';
-  $dark: '.$global_theme_color4.';
-  $orange: '.$global_theme_color5.';
-  $light-gray: '.$global_theme_color6.';
-  $neutral-light-blue: '.$global_theme_color7.';
-  @import "'.$path.'";
-');
-
-file_put_contents($output_file, $compiled_css);
+// Makes sure Css is saved
+if (function_exists('process_scss')) {
+    process_scss();
+}
 
 get_header();
 echo '<div id="content">';
