@@ -109,9 +109,7 @@
                             },
                             "choices": {
                                 "col-md-6": "Two Columns",
-                                "col-md-6 col-lg-4": "Three Columns",
-                                "col-md-6 col-lg-3": "Four Columns",
-                                "col-md-6 col-lg-2": "Five Columns"
+                                "col-md-6 col-lg-4": "Three Columns"
                             },
                             "default_value": "col-md-6 col-lg-4",
                             "return_format": "value",
@@ -494,7 +492,10 @@
                             },
                             "default_value": "",
                             "enable_opacity": 0,
-                            "return_format": "string"
+                            "return_format": "string",
+                            "custom_palette_source": "",
+                            "palette_colors": "",
+                            "show_color_wheel": true
                         },
                         {
                             "key": "field_63fc3c69ce709",
@@ -664,7 +665,10 @@
                             },
                             "default_value": "",
                             "enable_opacity": 0,
-                            "return_format": "string"
+                            "return_format": "string",
+                            "custom_palette_source": "",
+                            "palette_colors": "",
+                            "show_color_wheel": true
                         },
                         {
                             "key": "field_62e387c1bcd29",
@@ -1791,7 +1795,10 @@
                             },
                             "default_value": "#d1dbe3",
                             "enable_opacity": 0,
-                            "return_format": "string"
+                            "return_format": "string",
+                            "custom_palette_source": "",
+                            "palette_colors": "",
+                            "show_color_wheel": true
                         }
                     ],
                     "min": "",
@@ -1863,7 +1870,10 @@
                             },
                             "default_value": "#FFFFFF",
                             "enable_opacity": 0,
-                            "return_format": "string"
+                            "return_format": "string",
+                            "custom_palette_source": "",
+                            "palette_colors": "",
+                            "show_color_wheel": true
                         },
                         {
                             "key": "field_64e43b53bb76d",
@@ -2851,7 +2861,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "landing-page"
             }
         ]
     ],
@@ -2864,5 +2874,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748838349
+    "display_title": "",
+    "modified": 1760920962
 }

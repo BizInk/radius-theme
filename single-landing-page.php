@@ -2,7 +2,7 @@
 
 // Makes sure Css is saved
 if (function_exists('process_scss')) {
-    process_scss();
+  process_scss();
 }
 
 get_header();
